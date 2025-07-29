@@ -1,8 +1,37 @@
 #!/usr/bin/env bash
 
-jupyter-nbconvert $1 --to slides \
+set -e
+
+usage() {
+  echo "Usage: $0 -i notebook.ipynb [-o output_name]"
+  exit 1
+}
+
+while getopts ":i:o:" opt; do
+  case $opt in
+    i) input="$OPTARG" ;;
+    o) output="$OPTARG" ;;
+    *) usage ;;
+  esac
+done
+
+# Check that input was provided
+if [[ -z "$input" ]]; then
+  usage
+fi
+
+# Strip `.ipynb` suffix if present
+input_base="${input%.ipynb}"
+
+# Use provided output or fallback to input base
+output="${output:-$input_base}"
+
+# Run the conversion
+jupyter-nbconvert "$input" --to slides \
     --TagRemovePreprocessor.enabled=True \
     --SlidesExporter.reveal_transition=fade \
     --TagRemovePreprocessor.remove_input_tags=hide_input \
     --SlidesExporter.reveal_theme=blood \
-    --output=index
+    --output="$output"
+
+echo "✅ Slides generated: ${output}.slides.html"
