@@ -20,18 +20,29 @@ if [[ -z "$input" ]]; then
   usage
 fi
 
+if [ -z "$(which nbmerge)" ];then
+    python -m pip install nbmerge
+fi
+
+new=merged.ipynb
+nbmerge style.ipynb $input > $new
+jq '.metadata.title = "DA Workshop"' $new > tmp.ipynb
+mv tmp.ipynb $new
+
 # Strip `.ipynb` suffix if present
 input_base="${input%.ipynb}"
+
 
 # Use provided output or fallback to input base
 output="${output:-$input_base}"
 
 # Run the conversion
-jupyter-nbconvert "$input" --to slides \
+jupyter-nbconvert "$new" --to slides \
     --TagRemovePreprocessor.enabled=True \
     --SlidesExporter.reveal_transition=fade \
     --TagRemovePreprocessor.remove_input_tags=hide_input \
-    --SlidesExporter.reveal_theme=blood \
+    --SlidesExporter.reveal_theme=simple \
+    --SlidesExporter.reveal_scroll=True \
     --output="$output"
-
+rm -f $new
 echo "✅ Slides generated: ${output}.slides.html"

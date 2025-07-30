@@ -1,0 +1,74 @@
+h1 {
+    font-size: 1.8em !important;
+}
+
+.output_wrapper {
+    height: 300px; /* Set the desired height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+    padding: 10px; /* Optional: Add padding */
+}
+
+.output {
+    overflow-y: auto; /* Ensure the output area can scroll */
+}
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 65vh;
+}
+
+.reveal p,
+.reveal li,
+.reveal pre,
+div.hl-ipython3 pre,
+.reveal div.highlight pre {
+    color: black;
+}
+
+.reveal pre {
+  max-height: 60vh !important;
+  overflow-y: auto !important;
+}
+
+div.prompt,
+div.jp-InputPrompt,
+div.jp-InputArea-prompt,
+div.jp-OutputPrompt,
+div.jp-OutputArea-prompt {
+    display: none !important;
+}
+
+.reveal .slides {
+    max-width: 95% !important;
+    width: 65% !important;
+    margin: auto !important;
+    padding: 0 2em;
+    text-align: center;
+}
+
+.reveal .slides section,
+.reveal .slides section p {
+    max-width: 1000px;
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.reveal img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.output_area {
+  max-height: 60vh;
+  overflow-y: auto !important;
+  overflow-x: auto;
+  background: #1e1e1e;  /* optional: helps visibility */
+  padding: 0.5em;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
