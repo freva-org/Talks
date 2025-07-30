@@ -5,7 +5,7 @@
 <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<title>FrevaWorkshop slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>DA Workshop slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -7442,13 +7442,13 @@ main {
     init_mathjax();
     </script>
 <!-- End of mathjax configuration --><!-- Reveal Theme -->
-<link href="https://unpkg.com/reveal.js@4.0.2/dist/theme/blood.css" id="theme" rel="stylesheet"/>
+<link href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme" rel="stylesheet"/>
 </head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
 <div class="reveal">
-<div class="slides"><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2a4be1bc-6ca2-46d6-b7e9-9ca0ef7ea0b9">
+<div class="slides"><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8ff6ecb8-1ba3-4e6c-90cb-835b7e62f2af">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7465,16 +7465,16 @@ img {
     max-height: 65vh;
 }
 .reveal p {
-    color: white;
+    color: black;
 }
 .reveal pre {
-    color: white;
+    color: black;
 }
 div.hl-ipython3 pre {
     color: black;
 }
 .reveal li {
-  color: white;
+  color: black;
 }
 .reveal div.highlight pre {
     color: black;
@@ -7508,6 +7508,17 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
   margin-right: auto;
 }
 </style>
+</div>
+</div>
+</div>
+</div>
+</aside><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2a4be1bc-6ca2-46d6-b7e9-9ca0ef7ea0b9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Freva---Data-search-and-analysis-framework-for-the-Community">Freva - Data search and analysis framework for the Community<a class="anchor-link" href="#Freva---Data-search-and-analysis-framework-for-the-Community">¶</a></h1><img alt="No description has been provided for this image" src="https://freva-org.github.io/Talks/FrevaIntro/Logo.png" style="height: 350px;"/>
 </div>
 </div>
@@ -7645,7 +7656,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 <div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.nextgems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span> <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span> <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">)</span>
 <span class="n">db</span>
 </pre></div>
 </div>
@@ -7710,7 +7721,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db_yr</span> <span class="o">=</span>  <span class="n">databrowser</span><span class="p">(</span>
-    <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.nextgems.dkrz.de"</span><span class="p">,</span> 
+    <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span> 
     <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span> 
     <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> 
     <span class="n">frequency</span><span class="o">=</span><span class="s2">"mon"</span><span class="p">,</span> 
@@ -8058,6 +8069,639 @@ variable: tas
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e88efcc-2661-4886-9d0b-e7c8b493a32c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Remote-access-to-data">Remote access to data<a class="anchor-link" href="#Remote-access-to-data">¶</a></h3><ul>
+<li>You don't want to / can't work on levante?</li>
+<li>You have some overseas collaborators that want to access your data?</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=78cd8241-f6c6-4c58-a6df-8fd4ef746685">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>→ Stream the data from levante to anywhere with help of the zarr format</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=95099e4d-8a26-48ed-9555-48c04a757402">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [133]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">authenticate</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">token_file</span><span class="o">=</span><span class="s2">"~/token.json"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span> <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">,</span> <span class="n">experiment_id</span><span class="o">=</span><span class="s2">"historical"</span><span class="p">,</span> <span class="n">stream_zarr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">uri</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[133]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'https://www.nextgems.dkrz.de/api/freva-nextgen/data-portal/zarr/5b8ec334-d2c9-536d-9b8e-249bbd34ac23.zarr'</pre>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=278acb36-0310-4360-bf69-76eb9bfadaa5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [136]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+    <span class="n">uri</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">"zarr"</span><span class="p">,</span> 
+    <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"headers"</span><span class="p">:{</span><span class="s2">"Authorization"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Bearer </span><span class="si">{</span><span class="n">token</span><span class="p">[</span><span class="s1">'access_token'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">}</span>
+   <span class="p">})</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[136]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 138MB
+Dimensions:  (time: 1872, lon: 192, lat: 96)
+Coordinates:
+  * time     (time) datetime64[ns] 15kB 1850-01-31T23:52:00 ... 2005-12-31T23...
+  * lon      (lon) float64 2kB 0.0 1.875 3.75 5.625 ... 352.5 354.4 356.2 358.1
+  * lat      (lat) float64 768B -88.57 -86.72 -84.86 -83.0 ... 84.86 86.72 88.57
+Data variables:
+    tas      (time, lat, lon) float32 138MB ...
+Attributes:
+    CDI:          Climate Data Interface version 1.9.5 (http://mpimet.mpg.de/...
+    Conventions:  CF-1.6
+    history:      Thu Dec 13 08:45:54 2018: cdo -f nc -r setpartabn,tas.parta...
+    institution:  Max-Planck-Institute for Meteorology
+    CDO:          Climate Data Operators version 1.9.5 (http://mpimet.mpg.de/...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-82a2a914-a04b-4342-b8a3-b62107f07458" type="checkbox"/><label class="xr-section-summary" for="section-82a2a914-a04b-4342-b8a3-b62107f07458" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 1872</li><li><span class="xr-has-index">lon</span>: 192</li><li><span class="xr-has-index">lat</span>: 96</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-a184c2d6-20a3-4c0d-a4b2-d155159b3eb2" type="checkbox"/><label class="xr-section-summary" for="section-a184c2d6-20a3-4c0d-a4b2-d155159b3eb2">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">1850-01-31T23:52:00 ... 2005-12-...</div><input class="xr-var-attrs-in" id="attrs-89773d43-79c2-4f2c-983f-d9a585ede4f9" type="checkbox"/><label for="attrs-89773d43-79c2-4f2c-983f-d9a585ede4f9" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-01ee9e1f-a654-4c43-b9e1-c010eac4f8c8" type="checkbox"/><label for="data-01ee9e1f-a654-4c43-b9e1-c010eac4f8c8" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class="xr-var-data"><pre>array(['1850-01-31T23:52:00.000000000', '1850-02-28T23:52:00.000000000',
+       '1850-03-31T23:52:00.000000000', ..., '2005-10-31T23:52:00.000000000',
+       '2005-11-30T23:52:00.000000000', '2005-12-31T23:52:00.000000000'],
+      shape=(1872,), dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lon</span></div><div class="xr-var-dims">(lon)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.0 1.875 3.75 ... 356.2 358.1</div><input class="xr-var-attrs-in" id="attrs-8a2589e9-b1a0-4db1-9be1-4581ce1e7888" type="checkbox"/><label for="attrs-8a2589e9-b1a0-4db1-9be1-4581ce1e7888" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4c2a0b6d-c5eb-4d55-9641-2ada87f61145" type="checkbox"/><label for="data-4c2a0b6d-c5eb-4d55-9641-2ada87f61145" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class="xr-var-data"><pre>array([  0.   ,   1.875,   3.75 ,   5.625,   7.5  ,   9.375,  11.25 ,  13.125,
+        15.   ,  16.875,  18.75 ,  20.625,  22.5  ,  24.375,  26.25 ,  28.125,
+        30.   ,  31.875,  33.75 ,  35.625,  37.5  ,  39.375,  41.25 ,  43.125,
+        45.   ,  46.875,  48.75 ,  50.625,  52.5  ,  54.375,  56.25 ,  58.125,
+        60.   ,  61.875,  63.75 ,  65.625,  67.5  ,  69.375,  71.25 ,  73.125,
+        75.   ,  76.875,  78.75 ,  80.625,  82.5  ,  84.375,  86.25 ,  88.125,
+        90.   ,  91.875,  93.75 ,  95.625,  97.5  ,  99.375, 101.25 , 103.125,
+       105.   , 106.875, 108.75 , 110.625, 112.5  , 114.375, 116.25 , 118.125,
+       120.   , 121.875, 123.75 , 125.625, 127.5  , 129.375, 131.25 , 133.125,
+       135.   , 136.875, 138.75 , 140.625, 142.5  , 144.375, 146.25 , 148.125,
+       150.   , 151.875, 153.75 , 155.625, 157.5  , 159.375, 161.25 , 163.125,
+       165.   , 166.875, 168.75 , 170.625, 172.5  , 174.375, 176.25 , 178.125,
+       180.   , 181.875, 183.75 , 185.625, 187.5  , 189.375, 191.25 , 193.125,
+       195.   , 196.875, 198.75 , 200.625, 202.5  , 204.375, 206.25 , 208.125,
+       210.   , 211.875, 213.75 , 215.625, 217.5  , 219.375, 221.25 , 223.125,
+       225.   , 226.875, 228.75 , 230.625, 232.5  , 234.375, 236.25 , 238.125,
+       240.   , 241.875, 243.75 , 245.625, 247.5  , 249.375, 251.25 , 253.125,
+       255.   , 256.875, 258.75 , 260.625, 262.5  , 264.375, 266.25 , 268.125,
+       270.   , 271.875, 273.75 , 275.625, 277.5  , 279.375, 281.25 , 283.125,
+       285.   , 286.875, 288.75 , 290.625, 292.5  , 294.375, 296.25 , 298.125,
+       300.   , 301.875, 303.75 , 305.625, 307.5  , 309.375, 311.25 , 313.125,
+       315.   , 316.875, 318.75 , 320.625, 322.5  , 324.375, 326.25 , 328.125,
+       330.   , 331.875, 333.75 , 335.625, 337.5  , 339.375, 341.25 , 343.125,
+       345.   , 346.875, 348.75 , 350.625, 352.5  , 354.375, 356.25 , 358.125])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lat</span></div><div class="xr-var-dims">(lat)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-88.57 -86.72 ... 86.72 88.57</div><input class="xr-var-attrs-in" id="attrs-c7d1e6a9-5659-46b5-bfef-6620d60c8544" type="checkbox"/><label for="attrs-c7d1e6a9-5659-46b5-bfef-6620d60c8544" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-f1339d63-875c-48bf-919a-2ff6f7a56a4d" type="checkbox"/><label for="data-f1339d63-875c-48bf-919a-2ff6f7a56a4d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class="xr-var-data"><pre>array([-88.572169, -86.722531, -84.86197 , -82.998942, -81.134977, -79.270559,
+       -77.405888, -75.541061, -73.676132, -71.811132, -69.946081, -68.080991,
+       -66.215872, -64.35073 , -62.485571, -60.620396, -58.755209, -56.890013,
+       -55.024808, -53.159595, -51.294377, -49.429154, -47.563926, -45.698694,
+       -43.833459, -41.96822 , -40.102979, -38.237736, -36.372491, -34.507243,
+       -32.641994, -30.776744, -28.911492, -27.046239, -25.180986, -23.315731,
+       -21.450475, -19.585219, -17.719962, -15.854704, -13.989446, -12.124187,
+       -10.258928,  -8.393669,  -6.528409,  -4.66315 ,  -2.79789 ,  -0.93263 ,
+         0.93263 ,   2.79789 ,   4.66315 ,   6.528409,   8.393669,  10.258928,
+        12.124187,  13.989446,  15.854704,  17.719962,  19.585219,  21.450475,
+        23.315731,  25.180986,  27.046239,  28.911492,  30.776744,  32.641994,
+        34.507243,  36.372491,  38.237736,  40.102979,  41.96822 ,  43.833459,
+        45.698694,  47.563926,  49.429154,  51.294377,  53.159595,  55.024808,
+        56.890013,  58.755209,  60.620396,  62.485571,  64.35073 ,  66.215872,
+        68.080991,  69.946081,  71.811132,  73.676132,  75.541061,  77.405888,
+        79.270559,  81.134977,  82.998942,  84.86197 ,  86.722531,  88.572169])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-ccf482aa-fccc-4c7f-9005-b9514b3a9fa9" type="checkbox"/><label class="xr-section-summary" for="section-ccf482aa-fccc-4c7f-9005-b9514b3a9fa9">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>tas</span></div><div class="xr-var-dims">(time, lat, lon)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input class="xr-var-attrs-in" id="attrs-f3c65e9f-5613-48b5-8cb5-539b77da1617" type="checkbox"/><label for="attrs-f3c65e9f-5613-48b5-8cb5-539b77da1617" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-117348d0-6fd2-4762-9069-a02aaaf5013b" type="checkbox"/><label for="data-117348d0-6fd2-4762-9069-a02aaaf5013b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>code :</span></dt><dd>167</dd><dt><span>table :</span></dt><dd>128</dd></dl></div><div class="xr-var-data"><pre>[34504704 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-5db1fc3a-509a-400f-b637-2a8cfa9d0154" type="checkbox"/><label class="xr-section-summary" for="section-5db1fc3a-509a-400f-b637-2a8cfa9d0154">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-1f9c7dc6-18b3-4fb1-9e80-2d35e5d50405" type="checkbox"><label for="index-1f9c7dc6-18b3-4fb1-9e80-2d35e5d50405" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['1850-01-31 23:52:00', '1850-02-28 23:52:00',
+               '1850-03-31 23:52:00', '1850-04-30 23:52:00',
+               '1850-05-31 23:52:00', '1850-06-30 23:52:00',
+               '1850-07-31 23:52:00', '1850-08-31 23:52:00',
+               '1850-09-30 23:52:00', '1850-10-31 23:52:00',
+               ...
+               '2005-03-31 23:52:00', '2005-04-30 23:52:00',
+               '2005-05-31 23:52:00', '2005-06-30 23:52:00',
+               '2005-07-31 23:52:00', '2005-08-31 23:52:00',
+               '2005-09-30 23:52:00', '2005-10-31 23:52:00',
+               '2005-11-30 23:52:00', '2005-12-31 23:52:00'],
+              dtype='datetime64[ns]', name='time', length=1872, freq=None))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>lon</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-9d88598d-c5b9-4684-97e1-56bc3f35740d" type="checkbox"><label for="index-9d88598d-c5b9-4684-97e1-56bc3f35740d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([    0.0,   1.875,    3.75,   5.625,     7.5,   9.375,   11.25,  13.125,
+          15.0,  16.875,
+       ...
+        341.25, 343.125,   345.0, 346.875,  348.75, 350.625,   352.5, 354.375,
+        356.25, 358.125],
+      dtype='float64', name='lon', length=192))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>lat</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-78116dca-23a5-4aea-b15b-89e76e30d51f" type="checkbox"><label for="index-78116dca-23a5-4aea-b15b-89e76e30d51f" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([ -88.57216851400727,  -86.72253095466814,  -84.86197029204237,
+        -82.99894164283755,  -81.13497683767741,  -79.27055903485967,
+         -77.4058880820788,  -75.54106145287895,  -73.67613231320912,
+        -71.81113211427447,  -69.94608064698343,  -68.08099098565125,
+         -66.2158721139987,  -64.35073040887207,  -62.48557052203639,
+        -60.62039592682648,  -58.75520926937993,  -56.89001260135711,
+        -55.02480753831166,  -53.15959537001968,  -51.29437713895115,
+        -49.42915369712305,  -47.56392574797867, -45.698693877701785,
+        -43.83345857895126,  -41.96822026907538,   -40.1029793042494,
+        -38.23773599056483,  -36.37249059281224,  -34.50724334150103,
+        -32.64199443851768,  -30.77674406172325,  -28.91149236871774,
+        -27.04623949994481, -25.180985581270594,  -23.31573072614093,
+       -21.450475037398185,  -19.58521860882233, -17.719961526447428,
+       -15.854703869694873, -13.989445712356673, -12.124187123455766,
+       -10.258928168006376,  -8.393668907692383, -6.5284094014799905,
+        -4.663149706177884,  -2.797889876956741,  -0.932629967837991,
+         0.932629967837991,   2.797889876956741,   4.663149706177884,
+        6.5284094014799905,   8.393668907692383,  10.258928168006376,
+        12.124187123455766,  13.989445712356673,  15.854703869694873,
+        17.719961526447428,   19.58521860882233,  21.450475037398185,
+         23.31573072614093,  25.180985581270594,   27.04623949994481,
+         28.91149236871774,   30.77674406172325,   32.64199443851768,
+         34.50724334150103,   36.37249059281224,   38.23773599056483,
+          40.1029793042494,   41.96822026907538,   43.83345857895126,
+        45.698693877701785,   47.56392574797867,   49.42915369712305,
+         51.29437713895115,   53.15959537001968,   55.02480753831166,
+         56.89001260135711,   58.75520926937993,   60.62039592682648,
+         62.48557052203639,   64.35073040887207,    66.2158721139987,
+         68.08099098565125,   69.94608064698343,   71.81113211427447,
+         73.67613231320912,   75.54106145287895,    77.4058880820788,
+         79.27055903485967,   81.13497683767741,   82.99894164283755,
+         84.86197029204237,   86.72253095466814,   88.57216851400727],
+      dtype='float64', name='lat'))</pre></div></input></input></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-169f5f50-e99e-4304-8469-331541377358" type="checkbox"/><label class="xr-section-summary" for="section-169f5f50-e99e-4304-8469-331541377358">Attributes: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>CDI :</span></dt><dd>Climate Data Interface version 1.9.5 (http://mpimet.mpg.de/cdi)</dd><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>history :</span></dt><dd>Thu Dec 13 08:45:54 2018: cdo -f nc -r setpartabn,tas.partab -invertlat -setvar,tas tas.tmp tas.nc</dd><dt><span>institution :</span></dt><dd>Max-Planck-Institute for Meteorology</dd><dt><span>CDO :</span></dt><dd>Climate Data Operators version 1.9.5 (http://mpimet.mpg.de/cdo)</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=62a3ac4f-0a16-405f-a5ae-e1de6e506b3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8135,7 +8779,7 @@ require(
         Reveal.addEventListener('slidechanged', update);
 
         function setScrollingSlide() {
-            var scroll = false
+            var scroll = true
             if (scroll === true) {
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')
