@@ -71,19 +71,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
 <style type="text/css">
-    /*This file contains any manual css for this page that needs to override the global styles.
-This is only required when different pages style the same element differently. This is just
-a hack to deal with our current css styles and no new styling should be added in this file.*/
-
-#ipython-main-app {
-    position: relative;
-}
-#jupyter-main-app {
-    position: relative;
-}
-
-  </style>
-<style type="text/css">
 /*-----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
 | Distributed under the terms of the Modified BSD License.
@@ -8731,7 +8718,6 @@ Attributes:
 <li>Databrowser bread &amp; butter (Mo)</li>
 <li>How to Auth (Mo)</li>
 <li>Add your own data (Mo)</li>
-<li>Remote access via zarr streaming (Mo)</li>
 <li>The S3 cloud store (Manuel)</li>
 <li>Access data on S3 (Manuel)</li>
 <li>FrevaGPT (Martin)</li>
@@ -8739,7 +8725,502 @@ Attributes:
 </div>
 </div>
 </div>
-</div></section></section>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=677d0c59">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="File-vs-Object-Storage">File vs Object Storage<a class="anchor-link" href="#File-vs-Object-Storage">¶</a></h1>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8f76877d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="File-Storage">File Storage<a class="anchor-link" href="#File-Storage">¶</a></h2><ul>
+<li>Hierarchical structure (tree)<ul>
+<li>Directory with files and other directories</li>
+</ul>
+</li>
+<li>Easy to rename and move items around<ul>
+<li><strong>Not</strong> identified by name</li>
+<li>Change references</li>
+</ul>
+</li>
+<li><em>System-centric</em>, not designed to be share</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5788b95e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Object-Storage">Object Storage<a class="anchor-link" href="#Object-Storage">¶</a></h2><ul>
+<li>Flat structure (key-value)<ul>
+<li>Items are identified by a key/name</li>
+<li>Content is accessed providing key/name</li>
+</ul>
+</li>
+<li>Not easy to move items around!<ul>
+<li>Moving is renaming</li>
+<li>Modify key</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3ac8679">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Local-vs-Remote-Storage"><strong>Local</strong> vs Remote Storage<a class="anchor-link" href="#Local-vs-Remote-Storage">¶</a></h2><p><strong>Local</strong> storage should be:</p>
+<ul>
+<li>Fast</li>
+<li>Reliable</li>
+<li>Performant!</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ce2bff8f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Local-vs-Remote-Storage">Local vs <strong>Remote</strong> Storage<a class="anchor-link" href="#Local-vs-Remote-Storage">¶</a></h2><p><strong>Remote</strong> storage should be:</p>
+<ul>
+<li>Simple &amp; common language</li>
+<li>Permissive</li>
+<li>Highly available!</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a721614">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="HTTP-aka-internet-language!?">HTTP aka internet language!?<a class="anchor-link" href="#HTTP-aka-internet-language!?">¶</a></h2><p>Stands for <em>Hypertext Transfer Protocol</em>.
+There are many protocols...</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=08a6cd87">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>simple</li>
+<li>very generic</li>
+<li>very flexible</li>
+<li>famous!</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=75f8222d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Client makes a <strong>request</strong>, server <strong>replies</strong></p>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> IP the actual and literal Internel Protocol</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=12656450">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Requests">Requests<a class="anchor-link" href="#Requests">¶</a></h2><ul>
+<li>Method - <em>verb</em>/type (<code>GET</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods">etc...</a>)</li>
+<li>Headers - metadata, options (<code>Content-Type</code>,...)</li>
+<li>Body - data (empty, raw bytes, text,... )</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=110c3125">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Replies">Replies<a class="anchor-link" href="#Replies">¶</a></h2><ul>
+<li>Code + Result (<code>404 Not Found</code>)</li>
+<li>Headers - metadata, options (<code>Content-Type</code>,...)</li>
+<li>Body - data (empty, raw bytes, text,... )</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c13ff3d7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Object-Store-APIs">Object Store APIs<a class="anchor-link" href="#Object-Store-APIs">¶</a></h2><p>Different providers expose API not be (<strong>fully</strong>) interchangable. E.g.  <code>list objects</code>:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_Operations_Amazon_Simple_Storage_Service.html">AWS S3</a></li>
+</ul>
+<pre><code>GET /?delimiter={delimiter}&amp;encoding-type={enctype}&amp;marker=....&amp;prefix={prefix}
+</code></pre>
+<ul>
+<li><a href="https://docs.openstack.org/api-ref/object-store/">Openstack Swift</a></li>
+</ul>
+<pre><code>GET /v1/{account}/{container}
+</code></pre>
+<ul>
+<li><a href="https://cloud.google.com/storage/docs/json_api/v1/objects/get">Google Cloud Storage</a></li>
+</ul>
+<pre><code>GET /v1/b/{bucket}/o/
+</code></pre>
+<ul>
+<li><a href="https://myaccount.blob.core.windows.net/mycontainer/myblob">Azure Blob Storage</a></li>
+</ul>
+<pre><code>GET /{container}?restype=container&amp;comp=list
+</code></pre>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=149da911">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="S3---Simple-Storage-Service">S3 - Simple Storage Service<a class="anchor-link" href="#S3---Simple-Storage-Service">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a30759af">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Created by AWS</p>
+<ul>
+<li>S3 API is public (partially)</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93444f91">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="S3-Concepts">S3 Concepts<a class="anchor-link" href="#S3-Concepts">¶</a></h2><ul>
+<li>Bucket - The container of the objects</li>
+<li>Objects - The actual data</li>
+<li>Regions (advanced) - Location of the data</li>
+<li>Authentication</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a7977fb9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p>Directories can be emulated by empty objects terminated with <code>/</code></p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c28ae22">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="S3---Authentication">S3 - Authentication<a class="anchor-link" href="#S3---Authentication">¶</a></h2><ul>
+<li>A bucket may not be publicly available.</li>
+<li>Key-Secret pairs sign the request<ul>
+<li>May expire automatically</li>
+<li>May be valid indefinetly</li>
+</ul>
+</li>
+<li>Create temporarly link to share or receive data</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=669d773d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Exploring-data-on-S3">Exploring data on S3<a class="anchor-link" href="#Exploring-data-on-S3">¶</a></h2><ul>
+<li>Command line interfaces (CLIs)</li>
+<li>Software Development Kits (SDKs)<ul>
+<li>Libraries</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5f4994d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="CLIs">CLIs<a class="anchor-link" href="#CLIs">¶</a></h2><p>AWS provides a command line interface (not just for <code>s3</code>)</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1f5a40e3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#micromamba install awscli ||pip install awscli</span>
+<span class="n">aws</span> <span class="n">s3</span> <span class="n">ls</span> <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">ncar</span><span class="o">-</span><span class="n">cesm2</span><span class="o">-</span><span class="n">lens</span><span class="o">/</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">sign</span><span class="o">-</span><span class="n">request</span>
+
+<span class="n">alias</span> <span class="n">awss3</span><span class="o">=</span><span class="s1">'aws s3 --no-sign-request'</span>
+<span class="n">awss3</span> <span class="n">cp</span> <span class="o">--</span><span class="n">recursive</span>  <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">ncar</span><span class="o">-</span><span class="n">cesm2</span><span class="o">-</span><span class="n">lens</span><span class="o">/</span><span class="n">atm</span><span class="o">/</span><span class="n">static</span><span class="o">/</span><span class="n">grid</span><span class="o">.</span><span class="n">zarr</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">grid</span><span class="o">.</span><span class="n">zarr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f5e0ae26">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p>Appending <code>/</code> to the S3 resource may produce different results</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=defc6aa8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="MINIO">MINIO<a class="anchor-link" href="#MINIO">¶</a></h2><p><a href="https://docs.min.io/community/minio-object-store/index.html">Minio</a> - Open source S3 object store</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a4777504">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">minio</span><span class="o">-</span><span class="n">client</span>
+<span class="n">mc</span> <span class="n">alias</span> <span class="nb">set</span> <span class="n">aws</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">s3</span><span class="o">.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span> <span class="s2">""</span> <span class="s2">""</span> <span class="c1"># empty keys = no authentication</span>
+<span class="n">mc</span> <span class="n">ls</span> <span class="n">aws</span><span class="o">/</span><span class="n">ncar</span><span class="o">-</span><span class="n">cesm2</span><span class="o">-</span><span class="n">lens</span><span class="o">/</span><span class="n">ice</span><span class="o">/</span><span class="n">static</span><span class="o">/</span><span class="n">grid</span><span class="o">.</span><span class="n">zarr</span>
+
+<span class="n">mc</span> <span class="n">alias</span> <span class="nb">set</span> <span class="n">dkrz</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">s3</span><span class="o">.</span><span class="n">eu</span><span class="o">-</span><span class="n">dkrz</span><span class="o">-</span><span class="mf">1.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">cloud</span> <span class="s2">""</span> <span class="s2">""</span> 
+<span class="n">mc</span> <span class="n">ls</span> <span class="n">dkrz</span><span class="o">/</span><span class="n">freva</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf3ab097">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p>Appending <code>/</code> may produce different results</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56b67559">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Useful-Python-modules">Useful Python modules<a class="anchor-link" href="#Useful-Python-modules">¶</a></h2><ul>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html"><code>boto3</code></a> - AWS S3 official sdk for python<ul>
+<li><a href="https://github.com/terricain/aioboto3"><code>aioboto3</code></a></li>
+</ul>
+</li>
+<li><a href="https://developmentseed.org/obstore/latest/api/store/#obstore.store.from_url"><code>obstore</code></a> - Alse supports non S3 object stores</li>
+<li><a href="https://github.com/fsspec"><code>fsspec</code></a>/<a href="https://github.com/fsspec/s3fs"><code>s3fs</code></a> - Filesystem wrapper for storage types</li>
+<li><a href="https://min.io/docs/minio/linux/developers/python/minio-py.html"><code>minio</code></a> - Minio SDK for python</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=48b2e921">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="The-usual-suspects">The usual suspects<a class="anchor-link" href="#The-usual-suspects">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d7a69c4f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s1">'s3://ncar-cesm2-lens/ocn/static/grid.zarr'</span>
+<span class="n">s3_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=335de7b6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=adcad755">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+<span class="n">zarr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bdc94449">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="NetCDF-on-S3-(classic,-nc4/hdf5)">NetCDF on S3 (classic, nc4/hdf5)<a class="anchor-link" href="#NetCDF-on-S3-(classic,-nc4/hdf5)">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0e059576">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">endpoint_url</span><span class="o">=</span><span class="s2">"https://s3.eu-dkrz-1.dkrz.cloud"</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'s3://freva/workshop/tas.nc'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0338982">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>In Levante custom builds of <code>libnetcdf</code> and <code>cdo</code> can work with data on S3</p>
+<blockquote>
+<p>Very unstable!!!</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=951bd4f1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>/fastdata/k20200/k202186/public/bin/ncdump  -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
+/fastdata/k20200/k202186/public/bin/cdo  sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
+</code></pre>
+</div>
+</div>
+</div>
+</div></div></section></section>
 </div>
 </div>
 </main>
