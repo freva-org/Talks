@@ -7492,8 +7492,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 
 .reveal .slides {
     max-width: 95% !important;
-    width: 65% !important;
-    margin: auto !important;
+    margin: 0 !important;
     padding: 0 2em; /* optional: horizontal padding */
     display: flex;
     flex-direction: column; /* Stack slides vertically */
@@ -7511,7 +7510,6 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 }
 
 .reveal .slides section p {
-    margin: 0; /* Reset margins for paragraphs */
     text-align: left; /* Align text to the left */
 }
 
@@ -7524,24 +7522,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
   /* Reveal.js uses flex on the root to center slides
      — we switch that to top-align instead */
   align-items: flex-start !important;
-  margin: 0;
-   position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* 2) Ensure the slides wrapper also top-aligns its direct children */
-.reveal .slides {
-  align-items: flex-start !important;
-  margin: 0;
-   position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* 3) Zero out any auto top-margins on the current slide */
-.reveal .slides section.present {
-  margin-top: 0 !important;
+  position: absolute;
 }
 </style>
 </div>
