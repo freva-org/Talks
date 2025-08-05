@@ -8894,7 +8894,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
@@ -9069,7 +9069,8 @@ Search attributes by flavour:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="err">$</span> <span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">metadata</span><span class="o">-</span><span class="n">search</span> <span class="o">--</span><span class="n">host</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gems</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> \
-<span class="o">--</span><span class="n">facet</span> <span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="o">--</span><span class="n">json</span> <span class="o">|</span> <span class="n">jq</span> <span class="o">-</span><span class="n">rc</span> <span class="s1">'.project|join(", ")'</span>
+<span class="o">--</span><span class="n">facet</span> <span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="o">--</span><span class="n">json</span> <span class="o">|</span> <span class="n">jq</span> <span class="o">-</span><span class="n">r</span> <span class="s1">'to_entries[] | select(.value[] == "mpi-ge") </span><span class="se">\</span>
+<span class="s1">| .key'</span>
 </pre></div>
 </div>
 </div>
@@ -9083,7 +9084,7 @@ Search attributes by flavour:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>mpi-ge
+<pre>project
 </pre>
 </div>
 </div>
@@ -9134,10 +9135,12 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)[</span><span class="s2">"project"</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)</span>
+<span class="n">facets_with_mpi_ge</span> <span class="o">=</span> <span class="p">[</span><span class="n">facet</span> <span class="k">for</span> <span class="n">facet</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">"mpi-ge"</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">facets_with_mpi_ge</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9147,10 +9150,11 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['mpi-ge']</pre>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['project']
+</pre>
 </div>
 </div>
 </div>
