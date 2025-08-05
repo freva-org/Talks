@@ -71,19 +71,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
 <style type="text/css">
-    /*This file contains any manual css for this page that needs to override the global styles.
-This is only required when different pages style the same element differently. This is just
-a hack to deal with our current css styles and no new styling should be added in this file.*/
-
-#ipython-main-app {
-    position: relative;
-}
-#jupyter-main-app {
-    position: relative;
-}
-
-  </style>
-<style type="text/css">
 /*-----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
 | Distributed under the terms of the Modified BSD License.
@@ -11151,7 +11138,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#micromamba install awscli ||pip install awscli</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#conda install awscli ||pip install awscli</span>
 <span class="n">aws</span> <span class="n">s3</span> <span class="n">ls</span> <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">ncar</span><span class="o">-</span><span class="n">cesm2</span><span class="o">-</span><span class="n">lens</span><span class="o">/</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">sign</span><span class="o">-</span><span class="n">request</span>
 
 <span class="n">alias</span> <span class="n">awss3</span><span class="o">=</span><span class="s1">'aws s3 --no-sign-request'</span>
@@ -11218,19 +11205,6 @@ There are many protocols...</p>
 <span class="c1">#mc cp /scratch/${USER:0:1}/${USER}/path/to/my/file.txt dkrz/freva/workshop/${USER}/myfile.txt</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf3ab097">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<blockquote>
-<p>Appending <code>/</code> may produce different results</p>
-</blockquote>
 </div>
 </div>
 </div>
@@ -11403,30 +11377,24 @@ There are many protocols...</p>
 </div>
 </div>
 </div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0fc4a49f">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=860dd51e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This tutorial is similar to the first one! However we’ll learn how to use <code>xarray</code>, <code>zarr</code> and <code>s3fs</code> to explore datasets available via S3 but also upload results to it!</p>
-<p>To get started, we’ll run a simple analysis on a remote (NCAR AWS S3) collection (<code>cesm2-le</code>).</p>
+<p>For this part we have a single <code>python</code> the notebook.</p>
+<p>Assuming you previously executed the setup stetps:</p>
+<div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>clint<span class="w"> </span>gems
+$<span class="w"> </span>da-workshop-setup
+</pre></div>
+<p>Open the <code>Tutorial-py-s3.ipynb</code> and then from kernel environment list, please choose, <code>DA Workshop (python)</code>.</p>
+<p>Let's then start! :)</p>
 </div>
 </div>
 </div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8ce1d9e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id=""><a class="anchor-link" href="#">¶</a></h1>
-</div>
-</div>
-</div>
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=66a5e737">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=66a5e737">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11546,16 +11514,16 @@ There are many protocols...</p>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=73fdd893">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4af8464a-c11c-4eaa-bbe1-4be70b3e052b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">'ts'</span><span class="p">,</span> <span class="o">**</span><span class="n">search_keys</span><span class="p">)</span>
-<span class="n">db</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -11565,17 +11533,16 @@ There are many protocols...</p>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>(databrowser(flavour=freva, host=http://nextgems.dkrz.de:7777/api/freva-nextgen/databrowser, multi_version=False, variable=ts, fs_type=s3, project=cesm2-le, experiment=historical, realm=atm, time_frequency=monthly),
- ['s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-smbb-TS.zarr',
-  's3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr'])</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-smbb-TS.zarr',
+ 's3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr']</pre>
 </div>
 </div>
 </div>
 </div>
-</div></section><section>
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b80cb881">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11588,12 +11555,12 @@ There are many protocols...</p>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fbf01591">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=40ab5749-611f-4581-aaf7-21c9a749cb3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
@@ -11610,384 +11577,14 @@ There are many protocols...</p>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewbox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewbox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme="dark"],
-html[data-theme="dark"],
-body[data-theme="dark"],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1f1f1f;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: inline-block;
-  opacity: 0;
-  height: 0;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: "►";
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: "▼";
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: "(";
-}
-
-.xr-dim-list:after {
-  content: ")";
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ",";
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 22GB
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;xarray.Dataset&gt; Size: 22GB
 Dimensions:    (member_id: 50, time: 1980, lat: 192, lon: 288, nbnd: 2)
 Coordinates:
-  * lat        (lat) float64 2kB -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-  * lon        (lon) float64 2kB 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
+  * lat        (lat) float64 2kB -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
+  * lon        (lon) float64 2kB 0.0 1.25 2.5 ... 355.0 356.2 357.5 358.8
   * member_id  (member_id) &lt;U12 2kB 'r10i1191p1f2' ... 'r9i1171p1f2'
-  * time       (time) object 16kB 1850-01-16 12:00:00 ... 2014-12-16 12:00:00
+  * time       (time) object 16kB 1850-01-16 12:00 ... 2014-12-16 12:00:00
     time_bnds  (time, nbnd) object 32kB ...
 Dimensions without coordinates: nbnd
 Data variables:
@@ -11998,93 +11595,8 @@ Attributes:
     model_doi_url:     https://doi.org/10.5065/D67H1H0V
     source:            CAM
     time_period_freq:  month_1
-    topography_file:   /mnt/lustre/share/CESM/cesm_input/atm/cam/topo/fv_0.9x...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-7c164426-c20c-44bb-872b-88e73d96c154" type="checkbox"/><label class="xr-section-summary" for="section-7c164426-c20c-44bb-872b-88e73d96c154" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">member_id</span>: 50</li><li><span class="xr-has-index">time</span>: 1980</li><li><span class="xr-has-index">lat</span>: 192</li><li><span class="xr-has-index">lon</span>: 288</li><li><span>nbnd</span>: 2</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-8950c1ec-e3ae-436a-8734-abdf30b2da69" type="checkbox"/><label class="xr-section-summary" for="section-8950c1ec-e3ae-436a-8734-abdf30b2da69">Coordinates: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lat</span></div><div class="xr-var-dims">(lat)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-90.0 -89.06 -88.12 ... 89.06 90.0</div><input class="xr-var-attrs-in" id="attrs-9d2253f8-d3a1-40ff-8569-5943e4a936fb" type="checkbox"/><label for="attrs-9d2253f8-d3a1-40ff-8569-5943e4a936fb" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ece89142-9bb9-4d6e-9627-6260a3eb20a5" type="checkbox"/><label for="data-ece89142-9bb9-4d6e-9627-6260a3eb20a5" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class="xr-var-data"><pre>array([-90.      , -89.057592, -88.115183, -87.172775, -86.230366, -85.287958,
-       -84.34555 , -83.403141, -82.460733, -81.518325, -80.575916, -79.633508,
-       -78.691099, -77.748691, -76.806283, -75.863874, -74.921466, -73.979058,
-       -73.036649, -72.094241, -71.151832, -70.209424, -69.267016, -68.324607,
-       -67.382199, -66.439791, -65.497382, -64.554974, -63.612565, -62.670157,
-       -61.727749, -60.78534 , -59.842932, -58.900524, -57.958115, -57.015707,
-       -56.073298, -55.13089 , -54.188482, -53.246073, -52.303665, -51.361257,
-       -50.418848, -49.47644 , -48.534031, -47.591623, -46.649215, -45.706806,
-       -44.764398, -43.82199 , -42.879581, -41.937173, -40.994764, -40.052356,
-       -39.109948, -38.167539, -37.225131, -36.282723, -35.340314, -34.397906,
-       -33.455497, -32.513089, -31.570681, -30.628272, -29.685864, -28.743455,
-       -27.801047, -26.858639, -25.91623 , -24.973822, -24.031414, -23.089005,
-       -22.146597, -21.204188, -20.26178 , -19.319372, -18.376963, -17.434555,
-       -16.492147, -15.549738, -14.60733 , -13.664921, -12.722513, -11.780105,
-       -10.837696,  -9.895288,  -8.95288 ,  -8.010471,  -7.068063,  -6.125654,
-        -5.183246,  -4.240838,  -3.298429,  -2.356021,  -1.413613,  -0.471204,
-         0.471204,   1.413613,   2.356021,   3.298429,   4.240838,   5.183246,
-         6.125654,   7.068063,   8.010471,   8.95288 ,   9.895288,  10.837696,
-        11.780105,  12.722513,  13.664921,  14.60733 ,  15.549738,  16.492147,
-        17.434555,  18.376963,  19.319372,  20.26178 ,  21.204188,  22.146597,
-        23.089005,  24.031414,  24.973822,  25.91623 ,  26.858639,  27.801047,
-        28.743455,  29.685864,  30.628272,  31.570681,  32.513089,  33.455497,
-        34.397906,  35.340314,  36.282723,  37.225131,  38.167539,  39.109948,
-        40.052356,  40.994764,  41.937173,  42.879581,  43.82199 ,  44.764398,
-        45.706806,  46.649215,  47.591623,  48.534031,  49.47644 ,  50.418848,
-        51.361257,  52.303665,  53.246073,  54.188482,  55.13089 ,  56.073298,
-        57.015707,  57.958115,  58.900524,  59.842932,  60.78534 ,  61.727749,
-        62.670157,  63.612565,  64.554974,  65.497382,  66.439791,  67.382199,
-        68.324607,  69.267016,  70.209424,  71.151832,  72.094241,  73.036649,
-        73.979058,  74.921466,  75.863874,  76.806283,  77.748691,  78.691099,
-        79.633508,  80.575916,  81.518325,  82.460733,  83.403141,  84.34555 ,
-        85.287958,  86.230366,  87.172775,  88.115183,  89.057592,  90.      ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lon</span></div><div class="xr-var-dims">(lon)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.0 1.25 2.5 ... 356.2 357.5 358.8</div><input class="xr-var-attrs-in" id="attrs-2baf0ae1-da47-4cc0-8ffe-c08335988406" type="checkbox"/><label for="attrs-2baf0ae1-da47-4cc0-8ffe-c08335988406" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-fe9b246c-6d69-4a98-ac62-7c190ae9a950" type="checkbox"/><label for="data-fe9b246c-6d69-4a98-ac62-7c190ae9a950" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class="xr-var-data"><pre>array([  0.  ,   1.25,   2.5 , ..., 356.25, 357.5 , 358.75], shape=(288,))</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">member_id</span></div><div class="xr-var-dims">(member_id)</div><div class="xr-var-dtype">&lt;U12</div><div class="xr-var-preview xr-preview">'r10i1191p1f2' ... 'r9i1171p1f2'</div><input class="xr-var-attrs-in" disabled="" id="attrs-895ad665-400e-436a-93e2-c7755f150514" type="checkbox"/><label for="attrs-895ad665-400e-436a-93e2-c7755f150514" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-2f568b1c-695b-4d71-8c19-6a4a8abce308" type="checkbox"/><label for="data-2f568b1c-695b-4d71-8c19-6a4a8abce308" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['r10i1191p1f2', 'r11i1231p1f2', 'r11i1251p1f2', 'r11i1281p1f2',
-       'r11i1301p1f2', 'r12i1231p1f2', 'r12i1251p1f2', 'r12i1281p1f2',
-       'r12i1301p1f2', 'r13i1231p1f2', 'r13i1251p1f2', 'r13i1281p1f2',
-       'r13i1301p1f2', 'r14i1231p1f2', 'r14i1251p1f2', 'r14i1281p1f2',
-       'r14i1301p1f2', 'r15i1231p1f2', 'r15i1251p1f2', 'r15i1281p1f2',
-       'r15i1301p1f2', 'r16i1231p1f2', 'r16i1251p1f2', 'r16i1281p1f2',
-       'r16i1301p1f2', 'r17i1231p1f2', 'r17i1251p1f2', 'r17i1281p1f2',
-       'r17i1301p1f2', 'r18i1231p1f2', 'r18i1251p1f2', 'r18i1281p1f2',
-       'r18i1301p1f2', 'r19i1231p1f2', 'r19i1251p1f2', 'r19i1281p1f2',
-       'r19i1301p1f2', 'r1i1011p1f2', 'r20i1231p1f2', 'r20i1251p1f2',
-       'r20i1281p1f2', 'r20i1301p1f2', 'r2i1031p1f2', 'r3i1051p1f2',
-       'r4i1071p1f2', 'r5i1091p1f2', 'r6i1111p1f2', 'r7i1131p1f2',
-       'r8i1151p1f2', 'r9i1171p1f2'], dtype='&lt;U12')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">1850-01-16 12:00:00 ... 2014-12-...</div><input class="xr-var-attrs-in" id="attrs-f65cddd2-e8e0-4d92-8308-cffd7fde40e5" type="checkbox"/><label for="attrs-f65cddd2-e8e0-4d92-8308-cffd7fde40e5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-13f4bf03-e5a1-4f82-950c-9195fe60c7ff" type="checkbox"/><label for="data-13f4bf03-e5a1-4f82-950c-9195fe60c7ff" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class="xr-var-data"><pre>array([cftime.DatetimeNoLeap(1850, 1, 16, 12, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1850, 2, 15, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1850, 3, 16, 12, 0, 0, 0, has_year_zero=True),
-       ...,
-       cftime.DatetimeNoLeap(2014, 10, 16, 12, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2014, 11, 16, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2014, 12, 16, 12, 0, 0, 0, has_year_zero=True)],
-      shape=(1980,), dtype=object)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>time_bnds</span></div><div class="xr-var-dims">(time, nbnd)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">...</div><input class="xr-var-attrs-in" id="attrs-3b77fbca-5444-456f-a380-438ddf847ae8" type="checkbox"/><label for="attrs-3b77fbca-5444-456f-a380-438ddf847ae8" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-2e96bb7d-8075-4af6-b783-370d6becdee7" type="checkbox"/><label for="data-2e96bb7d-8075-4af6-b783-370d6becdee7" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time interval endpoints</dd></dl></div><div class="xr-var-data"><pre>[3960 values with dtype=object]</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-03f8131c-507d-4260-a364-4ebecf177299" type="checkbox"/><label class="xr-section-summary" for="section-03f8131c-507d-4260-a364-4ebecf177299">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>TS</span></div><div class="xr-var-dims">(member_id, time, lat, lon)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input class="xr-var-attrs-in" id="attrs-6822e7cc-bc89-4375-a402-9579564c306e" type="checkbox"/><label for="attrs-6822e7cc-bc89-4375-a402-9579564c306e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-fbc58738-8a87-4815-a232-603fc8767655" type="checkbox"/><label for="data-fbc58738-8a87-4815-a232-603fc8767655" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>cell_methods :</span></dt><dd>time: mean</dd><dt><span>long_name :</span></dt><dd>Surface temperature (radiative)</dd><dt><span>units :</span></dt><dd>K</dd></dl></div><div class="xr-var-data"><pre>[5474304000 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-1d894767-a613-4438-9619-eda06185066a" type="checkbox"/><label class="xr-section-summary" for="section-1d894767-a613-4438-9619-eda06185066a">Indexes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>lat</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-5d16591c-a0d4-4f4e-8092-e9793fb5da0b" type="checkbox"><label for="index-5d16591c-a0d4-4f4e-8092-e9793fb5da0b" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([             -90.0, -89.05759162303664,  -88.1151832460733,
-       -87.17277486910994,  -86.2303664921466, -85.28795811518324,
-        -84.3455497382199, -83.40314136125654, -82.46073298429319,
-       -81.51832460732984,
-       ...
-        81.51832460732984,  82.46073298429319,  83.40314136125654,
-         84.3455497382199,  85.28795811518324,   86.2303664921466,
-        87.17277486910994,   88.1151832460733,  89.05759162303664,
-                     90.0],
-      dtype='float64', name='lat', length=192))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>lon</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-28459f1c-4346-47bc-8c10-dd35420af070" type="checkbox"><label for="index-28459f1c-4346-47bc-8c10-dd35420af070" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([   0.0,   1.25,    2.5,   3.75,    5.0,   6.25,    7.5,   8.75,   10.0,
-        11.25,
-       ...
-        347.5, 348.75,  350.0, 351.25,  352.5, 353.75,  355.0, 356.25,  357.5,
-       358.75],
-      dtype='float64', name='lon', length=288))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>member_id</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-81b39eea-65bd-41f2-a7d1-cf421d03e273" type="checkbox"><label for="index-81b39eea-65bd-41f2-a7d1-cf421d03e273" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index(['r10i1191p1f2', 'r11i1231p1f2', 'r11i1251p1f2', 'r11i1281p1f2',
-       'r11i1301p1f2', 'r12i1231p1f2', 'r12i1251p1f2', 'r12i1281p1f2',
-       'r12i1301p1f2', 'r13i1231p1f2', 'r13i1251p1f2', 'r13i1281p1f2',
-       'r13i1301p1f2', 'r14i1231p1f2', 'r14i1251p1f2', 'r14i1281p1f2',
-       'r14i1301p1f2', 'r15i1231p1f2', 'r15i1251p1f2', 'r15i1281p1f2',
-       'r15i1301p1f2', 'r16i1231p1f2', 'r16i1251p1f2', 'r16i1281p1f2',
-       'r16i1301p1f2', 'r17i1231p1f2', 'r17i1251p1f2', 'r17i1281p1f2',
-       'r17i1301p1f2', 'r18i1231p1f2', 'r18i1251p1f2', 'r18i1281p1f2',
-       'r18i1301p1f2', 'r19i1231p1f2', 'r19i1251p1f2', 'r19i1281p1f2',
-       'r19i1301p1f2', 'r1i1011p1f2', 'r20i1231p1f2', 'r20i1251p1f2',
-       'r20i1281p1f2', 'r20i1301p1f2', 'r2i1031p1f2', 'r3i1051p1f2',
-       'r4i1071p1f2', 'r5i1091p1f2', 'r6i1111p1f2', 'r7i1131p1f2',
-       'r8i1151p1f2', 'r9i1171p1f2'],
-      dtype='object', name='member_id'))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-9828f16c-37f0-4891-ac5e-d0661b860b0d" type="checkbox"><label for="index-9828f16c-37f0-4891-ac5e-d0661b860b0d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(CFTimeIndex([1850-01-16 12:00:00, 1850-02-15 00:00:00, 1850-03-16 12:00:00,
-             1850-04-16 00:00:00, 1850-05-16 12:00:00, 1850-06-16 00:00:00,
-             1850-07-16 12:00:00, 1850-08-16 12:00:00, 1850-09-16 00:00:00,
-             1850-10-16 12:00:00,
-             ...
-             2014-03-16 12:00:00, 2014-04-16 00:00:00, 2014-05-16 12:00:00,
-             2014-06-16 00:00:00, 2014-07-16 12:00:00, 2014-08-16 12:00:00,
-             2014-09-16 00:00:00, 2014-10-16 12:00:00, 2014-11-16 00:00:00,
-             2014-12-16 12:00:00],
-            dtype='object', length=1980, calendar='noleap', freq=None))</pre></div></input></input></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-e105ec11-1c20-4f60-b6aa-0ff674b74eea" type="checkbox"/><label class="xr-section-summary" for="section-e105ec11-1c20-4f60-b6aa-0ff674b74eea">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>Conventions :</span></dt><dd>CF-1.0</dd><dt><span>logname :</span></dt><dd>sunseon</dd><dt><span>model_doi_url :</span></dt><dd>https://doi.org/10.5065/D67H1H0V</dd><dt><span>source :</span></dt><dd>CAM</dd><dt><span>time_period_freq :</span></dt><dd>month_1</dd><dt><span>topography_file :</span></dt><dd>/mnt/lustre/share/CESM/cesm_input/atm/cam/topo/fv_0.9x1.25_nc3000_Nsw042_Nrs008_Co060_Fi001_ZR_sgh30_24km_GRNL_c170103.nc</dd></dl></div></li></ul></div></div>
+    topography_file:   /mnt/lustre/share/CESM/cesm_input/atm/cam/topo/fv...
+</pre>
 </div>
 </div>
 </div>
@@ -12132,8 +11644,8 @@ Attributes:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-smbb-TS.zarr...
-Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr...
+<pre>Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-smbb-TS.zarr
+Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </pre>
 </div>
 </div>
@@ -12292,9 +11804,9 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr...
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
-    <span class="n">key</span><span class="o">=</span><span class="n">s3_config</span><span class="p">[</span><span class="s1">'access_key_id'</span><span class="p">],</span>
-    <span class="n">secret</span><span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'secret_access_key'</span><span class="p">],</span>
-    <span class="n">client_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'endpoint_url'</span><span class="p">:</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'endpoint'</span><span class="p">]},</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'access_key_id'</span><span class="p">],</span>
+    <span class="n">secret</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'secret_access_key'</span><span class="p">],</span>
+    <span class="n">client_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'endpoint_url'</span><span class="p">:</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'endpoint'</span><span class="p">]},</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -12310,7 +11822,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr...
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">full_prefix</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'bucket'</span><span class="p">]</span><span class="o">+</span><span class="s1">'/'</span><span class="o">+</span><span class="n">s3_config</span><span class="p">[</span><span class="s1">'prefix'</span><span class="p">]</span> 
-<span class="n">testobj</span><span class="o">=</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">full_prefix</span><span class="si">}</span><span class="s1">/hi.txt'</span>
+<span class="n">testobj</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">full_prefix</span><span class="si">}</span><span class="s1">/hi.txt'</span>
 <span class="n">s3</span><span class="o">.</span><span class="n">write_bytes</span><span class="p">(</span><span class="n">testobj</span><span class="p">,</span> <span class="sa">b</span><span class="s1">'Hi!</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Writing data to S3 works! Test it with:</span><span class="se">\n</span><span class="s2">curl </span><span class="si">{</span><span class="n">s3_config</span><span class="p">[</span><span class="s1">'endpoint'</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">testobj</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -12425,7 +11937,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="n">tmp_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">"/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.nc"</span>
+    <span class="n">tmp_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.nc"</span>
 
     <span class="n">dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
         
@@ -12575,23 +12087,54 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Try running:
 	/fastdata/k20200/k202186/public/bin/ncdump -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.nc#mode=s3,bytes
-	/fastdata/k20200/k202186/public/bin/cdo sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.nc#mode=s3,bytes
-Try running:
-	/fastdata/k20200/k202186/public/bin/ncdump -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.zarr#mode=s3,zarr
-	/fastdata/k20200/k202186/public/bin/cdo sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.zarr#mode=s3,zarr
-Try running:
-	/fastdata/k20200/k202186/public/bin/ncdump -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.nc#mode=s3,bytes
-	/fastdata/k20200/k202186/public/bin/cdo sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.nc#mode=s3,bytes
-Try running:
-	/fastdata/k20200/k202186/public/bin/ncdump -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.zarr#mode=s3,zarr
-	/fastdata/k20200/k202186/public/bin/cdo sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.zarr#mode=s3,zarr
+...
 Browser the data in https://eu-dkrz-1.dkrz.cloud/browser/freva/workshop/k202186
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ee99ff9">
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b7da1d5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As the output suggests, we should be able to see the contents of the bucket:</p>
+<ul>
+<li><a href="https://eu-dkrz-1.dkrz.cloud/browser/freva/workshop/">https://eu-dkrz-1.dkrz.cloud/browser/freva/workshop/</a></li>
+</ul>
+<p>Also, note the diference between endpoints:</p>
+<ul>
+<li><code>eu-dkrz-1.dkrz.cloud</code>  is for the web user interface</li>
+<li><code>s3.eu-dkrz-1.dkrz.cloud</code> is for the data access</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=279e7bfb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>With a custom netcdf build, we can pass an URL with fragment <code>mode</code>:</p>
+<ul>
+<li><code>s3</code> for any link that is an S3 URL</li>
+<li><code>bytes</code> for raw netcdf data</li>
+<li><code>zarr</code> for zarr data</li>
+</ul>
+<p>E.g.:</p>
+<ul>
+<li><code>https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes</code></li>
+<li><code>https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.zarr#mode=s3,zarr</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ee99ff9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12692,7 +12235,7 @@ variables:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>/fastdata/k20200/k202186/public/bin/ncdump<span class="w"> </span>-h<span class="w"> </span>https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/<span class="nv">$USER</span>/cesm2LE-historical-smbb-TS.zarr#mode<span class="o">=</span>s3,zarr
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>/fastdata/k20201/k202186/public/bin/ncdump<span class="w"> </span>-h<span class="w"> </span>https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/<span class="nv">$USER</span>/cesm2LE-historical-smbb-TS.zarr#mode<span class="o">=</span>s3,zarr
 <span class="o">!</span>/fastdata/k20200/k202186/public/bin/cdo<span class="w"> </span>sinfo<span class="w"> </span>https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/<span class="nv">$USER</span>/cesm2LE-historical-smbb-TS.zarr#mode<span class="o">=</span>s3,zarr
 </pre></div>
 </div>
@@ -12776,7 +12319,64 @@ variables:
 </div>
 </div>
 </div>
-</div></div></section></section>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e1484f8c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Opening"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">time_series</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">.nc</span><span class="se">\n</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">.zarr"</span><span class="p">)</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s1">.nc'</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s1">.zarr'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'All output datasets opened!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Opening
+https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.nc
+https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-smbb-TS.zarr
+https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.nc
+https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/cesm2LE-historical-cmip6-TS.zarr
+All output datasets opened!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e15f4e56">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Questions?</p>
+<ul>
+<li>Reading remote data is easy</li>
+<li>Writing not so much<ul>
+<li>Nice to share with others!</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 </main>
