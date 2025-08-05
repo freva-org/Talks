@@ -6,7 +6,10 @@ usage() {
   echo "Usage: $0 -i notebook.ipynb [-o output_name]"
   exit 1
 }
-
+add_center_option() {
+    local file="$1"
+    sed -i '/Reveal.initialize({/a\    center: false,' "$file"
+}
 while getopts ":i:o:" opt; do
   case $opt in
     i) input="$OPTARG" ;;
@@ -45,4 +48,5 @@ jupyter-nbconvert "$new" --to slides \
     --SlidesExporter.reveal_scroll=True \
     --output="$output"
 rm -f $new
+add_center_option ${output}.slides.html
 echo "✅ Slides generated: ${output}.slides.html"
