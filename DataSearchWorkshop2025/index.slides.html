@@ -71,6 +71,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
 <style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+  </style>
+<style type="text/css">
 /*-----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
 | Distributed under the terms of the Modified BSD License.
@@ -8253,16 +8266,15 @@ variable_id: tas
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>{'activity_id': ['output1'],
- 'experiment_id': ['1pctco2',
-                   'historical',
-                   'picontrol',
-                   'rcp26',
-                   'rcp45',
-                   'rcp85'],
+ 'experiment_id': ['1pctco2', 'historical', 'picontrol', '...'],
  'frequency': ['mon'],
  'institution_id': ['mpi-m'],
- 'member_id': ['r001i1850p3',
-... (204 more lines truncated) ...
+ 'member_id': ['r001i1850p3', 'r001i2005p3', 'r002i1850p3', '...'],
+ 'mip_era': ['mpi-ge'],
+ 'realm': ['atmos', 'land'],
+ 'source_id': ['mpi-esm'],
+ 'time_aggregation': ['mean'],
+ 'variable_id': ['tas']}
 </pre>
 </div>
 </div>
@@ -8371,7 +8383,7 @@ variable_id: tas
     <span class="n">frequency</span><span class="o">=</span><span class="s2">"mon"</span><span class="p">,</span> 
     <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">,</span>
     <span class="n">time</span><span class="o">=</span><span class="s2">"2025-01 to 2100-12"</span>
-<span class="p">)</span>
+<span class="p">))</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">db_yr</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9001,125 +9013,7 @@ Search attributes by flavour:
   - institution_id
   - model_id
   - project
-  - product
-  - realm
-  - variable
-  - time
-  - bbox
-  - time_aggregation
-  - time_frequency
-  - cmor_table
-  - dataset
-  - format
-  - grid_id
-  - level_type
-  cmip6:
-  - experiment_id
-  - member_id
-  - fs_type
-  - grid_label
-  - institution_id
-  - source_id
-  - mip_era
-  - activity_id
-  - realm
-  - variable_id
-  - time
-  - bbox
-  - time_aggregation
-  - frequency
-  - table_id
-  - dataset
-  - format
-  - grid_id
-  - level_type
-  cordex:
-  - experiment
-  - ensemble
-  - fs_type
-  - grid_label
-  - institution
-  - model
-  - project
-  - domain
-  - realm
-  - variable
-  - time
-  - bbox
-  - time_aggregation
-  - time_frequency
-  - cmor_table
-  - dataset
-  - driving_model
-  - format
-  - grid_id
-  - level_type
-  - rcm_name
-  - rcm_version
-  freva:
-  - project
-  - product
-  - institute
-  - model
-  - experiment
-  - time_frequency
-  - realm
-  - variable
-  - ensemble
-  - time_aggregation
-  - fs_type
-  - grid_label
-  - cmor_table
-  - format
-  - grid_id
-  - level_type
-  - dataset
-  - time
-  - bbox
-  - user
-  nextgems:
-  - simulation_id
-  - member_id
-  - fs_type
-  - grid_label
-  - institution_id
-  - source_id
-  - project
-  - experiment_id
-  - realm
-  - variable_id
-  - time
-  - bbox
-  - time_reduction
-  - time_frequency
-  - cmor_table
-  - dataset
-  - format
-  - grid_id
-  - level_type
-  user:
-  - project
-  - product
-  - institute
-  - model
-  - experiment
-  - time_frequency
-  - realm
-  - variable
-  - ensemble
-  - time_aggregation
-  - fs_type
-  - grid_label
-  - cmor_table
-  - format
-  - grid_id
-  - level_type
-  - dataset
-  - time
-  - bbox
-  - user
-
-
+118 more lines truncated
 </pre>
 </div>
 </div>
@@ -10840,17 +10734,24 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=677d0c59">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=532f6043-cb82-4aaf-8b44-137305c65933">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="File-vs-Object-Storage">File vs Object Storage<a class="anchor-link" href="#File-vs-Object-Storage">¶</a></h1>
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">S3 Cloud Storage<span style="font-size: 0.6em; font-weight: normal;"></span></h1>
 </div>
 </div>
 </div>
-</div></section><section>
+<h3>File vs Object Storage</h3>
+</div>
+</div>
+</div>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8f76877d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10872,7 +10773,25 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div>
-</div></section><section>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a828139a-a969-4a5a-b131-ceadd15cdef5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">S3 Cloud Storage<span style="font-size: 0.6em; font-weight: normal;"></span></h1>
+</div>
+</div>
+</div>
+<h3>File vs Object Storage</h3>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5788b95e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10895,29 +10814,37 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f1db6a3b-8b79-4fb9-a1d0-9c6c8d2cacd8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">S3 Cloud Storage<span style="font-size: 0.6em; font-weight: normal;"></span></h1>
+</div>
+</div>
+</div>
+<h3>Local vs Remote</h3>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3ac8679">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Local-vs-Remote-Storage"><strong>Local</strong> vs Remote Storage<a class="anchor-link" href="#Local-vs-Remote-Storage">¶</a></h2><p><strong>Local</strong> storage should be:</p>
+<p><strong>Local</strong> storage should be:</p>
 <ul>
 <li>Fast</li>
 <li>Reliable</li>
 <li>Performant!</li>
 </ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ce2bff8f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Local-vs-Remote-Storage">Local vs <strong>Remote</strong> Storage<a class="anchor-link" href="#Local-vs-Remote-Storage">¶</a></h2><p><strong>Remote</strong> storage should be:</p>
+<p><strong>Remote</strong> storage should be:</p>
 <ul>
 <li>Simple &amp; common language</li>
 <li>Permissive</li>
@@ -11399,10 +11326,10 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="n">fs_type</span><span class="o">=</span><span class="s2">"s3"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">strip_dict</span><span class="p">(</span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="n">fs_type</span><span class="o">=</span><span class="s2">"s3"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -11421,62 +11348,11 @@ $<span class="w"> </span>da-workshop-setup
  'model': ['cesm2-le'],
  'product': ['output'],
  'project': ['cesm2-le'],
- 'realm': ['atm', 'ice', 'lnd', 'ocn'],
+ 'realm': ['atm', 'ice', 'lnd', '...'],
  'time_aggregation': ['mean'],
  'time_frequency': ['daily', 'monthly', 'static'],
- 'variable': ['aice',
-  'aice_d',
-  'dic',
-  'doc',
-  'flns',
-  'flnsc',
-  'flut',
-  'fsno',
-  'fsns',
-  'fsnsc',
-  'fsntoa',
-  'h2osno',
-  'hi',
-  'hi_d',
-  'icefrac',
-  'lhflx',
-  'npp',
-  'o2',
-  'pd',
-  'precc',
-  'precl',
-  'precsc',
-  'precsl',
-  'ps',
-  'psl',
-  'q',
-  'qrunoff',
-  'rain',
-  'salt',
-  'shflx',
-  'snow',
-  'soilliq',
-  'soilwater_10cm',
-  't',
-  'temp',
-  'tmq',
-  'trefht',
-  'trefhtmn',
-  'trefhtmx',
-  'trefmxav',
-  'ts',
-  'u',
-  'ues',
-  'uet',
-  'uvel',
-  'v',
-  'vns',
-  'vnt',
-  'vvel',
-  'wts',
-  'wtt',
-  'wvel',
-  'z3']}</pre>
+ 'variable': ['aice', 'aice_d', 'dic', '...']}
+</pre>
 </div>
 </div>
 </div>
@@ -11565,7 +11441,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">})</span>
-<span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}))</span>
 </pre></div>
 </div>
 </div>
@@ -11673,7 +11549,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=586912e2">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=586912e2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11738,7 +11614,21 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d89dfe6c-3c22-4634-aff3-c7cc5d925387">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=77e7219d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -12358,25 +12248,53 @@ All output datasets opened!
 </div>
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e15f4e56">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Questions?</p>
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Wrap-up<span style="font-size: 0.6em; font-weight: normal;"></span></h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8073da1-bee1-4d81-8c96-cc1975ea5f4f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="What-we-couldn't-cover-today">What we couldn't cover today<a class="anchor-link" href="#What-we-couldn't-cover-today">¶</a></h3>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=18f2f95a-98bf-4a4c-b7a0-752e0e3441cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Reading remote data is easy</li>
-<li>Writing not so much<ul>
-<li>Nice to share with others!</li>
+<li>Add your Data Analysis code:<ul>
+<li>Freva helps you to create UI's for Web, CLI and python</li>
+<li>Reproduciple</li>
+<li>Shareable</li>
 </ul>
 </li>
+<li>AI tools such as frevaGPT (sneak peek via: <a href="https://gems.dkrz.de/chatbot">gems.dkrz.de/chatbot</a>)</li>
 </ul>
 </div>
 </div>
 </div>
-</div></section></section>
+</div></div></div></section></section>
 </div>
 </div>
 </main>
