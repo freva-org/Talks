@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>DA Workshop slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7428,7 +7428,6 @@ main {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
-                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7871,7 +7870,7 @@ Search attributes by flavour:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                  <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">)</span>
@@ -8644,8 +8643,8 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">authenticate</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">authenticate</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">token</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">token_file</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"~/.token.json"</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">())</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                    <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -8835,25 +8834,25 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=513cf6ad">
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9796d44d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 <div style="display: flex; align-items: center; gap: 20px;">
-<div style="background: white; color: #3498db; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">1</div>
+<div style="background: white; color: #95a5a6; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">0</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Search <span style="font-size: 0.6em; font-weight: normal;">(Findablity)</span></h1>
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Setup</h1>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f1238e83">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8880,7 +8879,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">export</span> <span class="n">PATH</span><span class="o">=/</span><span class="n">sw</span><span class="o">/</span><span class="n">spack</span><span class="o">-</span><span class="n">levante</span><span class="o">/</span><span class="n">cdo</span><span class="o">-</span><span class="mf">2.2.2</span><span class="o">-</span><span class="mi">4</span><span class="n">z4icb</span><span class="o">/</span><span class="nb">bin</span><span class="p">:</span><span class="err">$</span><span class="n">PATH</span>
@@ -8914,15 +8913,15 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1523f332">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1523f332">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8942,7 +8941,25 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=48f56901">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: white; color: #3498db; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">1</div>
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Search <span style="font-size: 0.6em; font-weight: normal;">(Findablity)</span></h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=371bc4f8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9035,7 +9052,7 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -9048,9 +9065,9 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>dict_keys(['ensemble', 'experiment', 'institute', 'model', 'product', 'project', 'realm', 'time_aggregation', 'time_frequency', 'variable'])</pre>
 </div>
 </div>
@@ -9141,7 +9158,7 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)[</span><span class="s2">"project"</span><span class="p">]</span>
@@ -9154,9 +9171,9 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>['mpi-ge']</pre>
 </div>
 </div>
@@ -9167,10 +9184,11 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="s2">"tas"</span> <span class="ow">in</span> <span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)[</span><span class="s2">"variable"</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="s2">"tas"</span> <span class="ow">in</span> <span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
+                                     <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)[</span><span class="s2">"variable"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -9180,9 +9198,9 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>True</pre>
 </div>
 </div>
@@ -9208,7 +9226,7 @@ Search attributes by flavour:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="err">$</span> <span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">metadata</span><span class="o">-</span><span class="n">search</span> <span class="o">--</span><span class="n">host</span> <span class="n">www</span><span class="o">.</span><span class="n">gems</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> <span class="o">--</span><span class="n">flavour</span> <span class="n">cmip6</span> \
-<span class="n">mip_era</span><span class="o">=</span><span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="n">variable_id</span><span class="o">=</span><span class="n">tas</span>
+<span class="n">mip_era</span><span class="o">=</span><span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="n">variable_id</span><span class="o">=</span><span class="n">tas</span> <span class="o">--</span><span class="n">time</span> <span class="s1">'2025-01 to 2100-12'</span>
 </pre></div>
 </div>
 </div>
@@ -9222,8 +9240,8 @@ Search attributes by flavour:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>member_id: r001i1850p3,  r001i2005p3,  r002i1850p3, ...
-experiment_id: 1pctco2,  historical,  picontrol, ...
+<pre>member_id: r001i1850p3,  r001i2005p3,  r002i2005p3, ...
+experiment_id: picontrol,  rcp26,  rcp45, ...
 institution_id: mpi-m
 source_id: mpi-esm
 activity_id: output1
@@ -9232,6 +9250,7 @@ realm: atmos,  land, ...
 time_aggregation: mean
 frequency: mon
 variable_id: tas
+1 more lines truncated
 </pre>
 </div>
 </div>
@@ -9253,13 +9272,15 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
-                 <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">)</span>
+                 <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
+                 <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">,</span>
+                 <span class="n">time</span><span class="o">=</span><span class="s2">"2025-01 to 2100-12"</span><span class="p">)</span>
 <span class="n">db</span>
 </pre></div>
 </div>
@@ -9270,10 +9291,10 @@ variable_id: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<table><tr><th colspan="2" style="text-align: left">databrowser(flavour=cmip6, host=https://www.gems.dkrz.de/api/freva-nextgen/databrowser, multi_version=False, mip_era=mpi-ge, variable_id=tas)</th></tr><tr><td><b># objects</b></td><td style="text-align: left">921</td></tr><tr><td valign="top"><b>Available search facets for <em>cmip6</em> flavour</b></td><td style="text-align: left">experiment_id, member_id, fs_type, grid_label, institution_id, source_id, mip_era, activity_id, realm, variable_id, time, bbox, time_aggregation, frequency, table_id, dataset, format, grid_id, level_type</td></tr><tr><td valign="top"><b>Available flavours</b></td><td style="text-align: left">freva, cmip6, cmip5, cordex, nextgems, user</td></tr></table>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<table><tr><th colspan="2" style="text-align: left">databrowser(flavour=cmip6, host=https://www.gems.dkrz.de/api/freva-nextgen/databrowser, multi_version=False, mip_era=mpi-ge, variable_id=tas, time=2025-01 to 2100-12, time_select=flexible)</th></tr><tr><td><b># objects</b></td><td style="text-align: left">602</td></tr><tr><td valign="top"><b>Available search facets for <em>cmip6</em> flavour</b></td><td style="text-align: left">experiment_id, member_id, fs_type, grid_label, institution_id, source_id, mip_era, activity_id, realm, variable_id, time, bbox, time_aggregation, frequency, table_id, dataset, format, grid_id, level_type</td></tr><tr><td valign="top"><b>Available flavours</b></td><td style="text-align: left">freva, cmip6, cmip5, cordex, nextgems, user</td></tr></table>
 </div>
 </div>
 </div>
@@ -9391,7 +9412,7 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">"frequency"</span><span class="p">]</span>
@@ -9404,9 +9425,9 @@ variable_id: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>['mon']</pre>
 </div>
 </div>
@@ -9417,7 +9438,7 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db_yr</span> <span class="o">=</span>  <span class="n">databrowser</span><span class="p">(</span>
@@ -9438,9 +9459,9 @@ variable_id: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>602</pre>
 </div>
 </div>
@@ -9568,7 +9589,7 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db_yr</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">"experiment_id"</span><span class="p">]</span>
@@ -9581,9 +9602,9 @@ variable_id: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>['picontrol', 'rcp26', 'rcp45', 'rcp85']</pre>
 </div>
 </div>
@@ -9594,7 +9615,7 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pcontrol</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -9611,9 +9632,9 @@ variable_id: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>2</pre>
 </div>
 </div>
@@ -9624,7 +9645,7 @@ variable_id: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pcontrol</span><span class="p">):</span>
@@ -9703,7 +9724,7 @@ variable: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span>
@@ -9719,9 +9740,9 @@ variable: tas
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>{'ensemble': ['r001i1850p3'],
  'experiment': ['picontrol'],
  'institute': ['mpi-m'],
@@ -9752,7 +9773,7 @@ variable: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">metadata</span><span class="o">-</span><span class="n">search</span> <span class="n">mip_era</span><span class="o">=</span><span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="n">variable_id</span><span class="o">=</span><span class="n">tas</span> \
@@ -9893,7 +9914,7 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -9942,7 +9963,7 @@ variable: tas
 </div>
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb00e0b9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10027,7 +10048,7 @@ variable: tas
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="err">$</span> <span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">intake</span><span class="o">-</span><span class="n">catalogue</span>  <span class="o">--</span><span class="n">host</span> <span class="n">www</span><span class="o">.</span><span class="n">gems</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> <span class="o">--</span><span class="n">flavour</span> <span class="n">cmip6</span> \
 <span class="n">mip_era</span><span class="o">=</span><span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="n">frequency</span><span class="o">=</span><span class="n">mon</span> <span class="n">variable_id</span><span class="o">=</span><span class="n">tas</span> <span class="o">--</span><span class="n">time</span> <span class="s2">"2025-01 to 2100-12"</span> \
-<span class="n">experiment_id</span><span class="o">=!</span>picontrol
+<span class="n">experiment_id</span><span class="o">=</span><span class="n">picontrol</span>
 </pre></div>
 </div>
 </div>
@@ -10046,8 +10067,232 @@ variable: tas
    "attributes": [
       {
          "column_name": "mip_era",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "activity_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "institution_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "source_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "experiment_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "frequency",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "realm",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "variable_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "member_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "table_id",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "fs_type",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "grid_label",
+         "vocabulary": ""
+      },
+      {
+         "column_name": "format",
+         "vocabulary": ""
+      }
+   ],
+   "assets": {
+      "column_name": "file",
+      "format_column_name": "format"
+   },
+   "id": "freva",
+   "description": "Catalogue from freva-databrowser v2507.0.0",
+   "title": "freva-databrowser catalogue",
+   "last_updated": "2025-08-05T14:06:40.039213",
+   "aggregation_control": {
+      "variable_column_name": "variable_id",
+      "groupby_attrs": [],
+      "aggregations": [
+         {
+            "type": "union",
+            "attribute_name": "mip_era",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "activity_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "institution_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "source_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "experiment_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "frequency",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "realm",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "variable_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "member_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "table_id",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "fs_type",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "grid_label",
+            "options": {}
+         },
+         {
+            "type": "union",
+            "attribute_name": "format",
+            "options": {}
+         }
+      ]
+   }
+,
+   "catalog_dict": [
+   {
+   "file": "/work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/tas/r001i1850p3/v20190123/tas_Amon_MPI-ESM_piControl_r001i1850p3_210001-219912.nc",
+   "project": "MPI-GE",
+   "product": "output1",
+   "institute": "MPI-M",
+   "model": "MPI-ESM",
+   "experiment": "piControl",
+   "time_frequency": "mon",
+   "realm": "atmos",
+   "variable": "tas",
+   "ensemble": "r001i1850p3",
+   "cmor_table": "Amon",
+   "fs_type": "posix",
+   "grid_label": "gn",
+   "format": "nc"
+},
+   {
+   "file": "/work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/tas/r001i1850p3/v20190123/tas_Amon_MPI-ESM_piControl_r001i1850p3_200001-209912.nc",
+   "project": "MPI-GE",
+   "product": "output1",
+   "institute": "MPI-M",
+   "model": "MPI-ESM",
+   "experiment": "piControl",
+   "time_frequency": "mon",
+   "realm": "atmos",
+   "variable": "tas",
+   "ensemble": "r001i1850p3",
+   "cmor_table": "Amon",
+   "fs_type": "posix",
+   "grid_label": "gn",
+   "format": "nc"
+},
+   {
+   "file": "/work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/pr/r001i1850p3/v20190123/pr_Amon_MPI-ESM_piControl_r001i1850p3_210001-219912.nc",
+   "project": "MPI-GE",
+   "product": "output1",
+   "institute": "MPI-M",
+   "model": "MPI-ESM",
+   "experiment": "piControl",
+   "time_frequency": "mon",
+   "realm": "atmos",
+   "variable": "pr",
+   "ensemble": "r001i1850p3",
+   "cmor_table": "Amon",
+   "fs_type": "posix",
+   "grid_label": "gn",
+   "format": "nc"
+},
+   {
+   "file": "/work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/pr/r001i1850p3/v20190123/pr_Amon_MPI-ESM_piControl_r001i1850p3_200001-209912.nc",
+   "project": "MPI-GE",
+   "product": "output1",
+   "institute": "MPI-M",
+   "model": "MPI-ESM",
+   "experiment": "piControl",
+   "time_frequency": "mon",
+   "realm": "atmos",
+   "variable": "pr",
+   "ensemble": "r001i1850p3",
+   "cmor_table": "Amon",
+   "fs_type": "posix",
+   "grid_label": "gn",
+   "format": "nc"
+}
+   ]
+}
+
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4fd6abc6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67280f26">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>.</p>
 </div>
 </div>
 </div>
@@ -10067,10 +10312,15 @@ variable: tas
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">intake_catalogue</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">,</span>
+                 <span class="n">frequency</span><span class="o">=</span><span class="s2">"mon"</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">"2025-01 to 2100-12"</span><span class="p">,</span>
+                 <span class="n">experiment_id</span><span class="o">=</span><span class="s2">"picontrol"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
+                 <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span>
+                <span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">intake_catalogue</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -10083,7 +10333,7 @@ variable: tas
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<p><strong>freva catalog with 600 dataset(s) from 600 asset(s)</strong>:</p> <div>
+<p><strong>freva catalog with 2 dataset(s) from 2 asset(s)</strong>:</p> <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -10107,7 +10357,7 @@ variable: tas
 <tbody>
 <tr>
 <th>file</th>
-<td>600</td>
+<td>2</td>
 </tr>
 <tr>
 <th>project</th>
@@ -10127,7 +10377,7 @@ variable: tas
 </tr>
 <tr>
 <th>experiment</th>
-<td>3</td>
+<td>1</td>
 </tr>
 <tr>
 <th>time_frequency</th>
@@ -10135,7 +10385,7 @@ variable: tas
 </tr>
 <tr>
 <th>realm</th>
-<td>2</td>
+<td>1</td>
 </tr>
 <tr>
 <th>variable</th>
@@ -10143,11 +10393,11 @@ variable: tas
 </tr>
 <tr>
 <th>ensemble</th>
-<td>100</td>
+<td>1</td>
 </tr>
 <tr>
 <th>cmor_table</th>
-<td>2</td>
+<td>1</td>
 </tr>
 <tr>
 <th>fs_type</th>
@@ -10193,7 +10443,7 @@ variable: tas
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="err">$</span> <span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">stac</span><span class="o">-</span><span class="n">catalogue</span> <span class="o">--</span><span class="n">host</span> <span class="n">www</span><span class="o">.</span><span class="n">gems</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> <span class="o">--</span><span class="n">flavour</span> <span class="n">cmip6</span> \
 <span class="n">mip_era</span><span class="o">=</span><span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="n">frequency</span><span class="o">=</span><span class="n">mon</span> <span class="n">variable_id</span><span class="o">=</span><span class="n">tas</span> <span class="o">--</span><span class="n">time</span> <span class="s2">"2025-01 to 2100-12"</span> \
-<span class="n">experiment_id</span><span class="o">=!</span>picontrol
+<span class="n">experiment_id</span><span class="o">=</span><span class="n">picontrol</span>
 </pre></div>
 </div>
 </div>
@@ -10208,7 +10458,7 @@ variable: tas
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre><span class="ansi-green-intense-fg ansi-bold">Downloading the STAC catalog started </span><span class="ansi-green-intense-fg ansi-bold">...</span>
-STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025/stac-catalog-Dataset-cmip6-20b84af9-730-file.zip (size: 2.29 MB). Or simply download from: https://www.gems.dkrz.de/api/freva-nextgen/databrowser/stac-catalogue/cmip6/file?multi-version=False&amp;mip_era=mpi-ge&amp;frequency=mon&amp;variable_id=pr&amp;variable_id=tas&amp;experiment_id=%21picontrol&amp;time=2025-01+to+2100-12&amp;time_select=flexible
+STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025/stac-catalog-Dataset-cmip6-ca87bec5-e66-file.zip (size: 0.02 MB). Or simply download from: https://www.gems.dkrz.de/api/freva-nextgen/databrowser/stac-catalogue/cmip6/file?multi-version=False&amp;mip_era=mpi-ge&amp;frequency=mon&amp;variable_id=pr&amp;variable_id=tas&amp;experiment_id=picontrol&amp;time=2025-01+to+2100-12&amp;time_select=flexible
 
 </pre>
 </div>
@@ -10231,10 +10481,15 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">stac_catalogue</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">,</span>
+                 <span class="n">frequency</span><span class="o">=</span><span class="s2">"mon"</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">"2025-01 to 2100-12"</span><span class="p">,</span>
+                 <span class="n">experiment_id</span><span class="o">=</span><span class="s2">"picontrol"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
+                 <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span>
+                <span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">stac_catalogue</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -10251,10 +10506,10 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </pre>
 </div>
 </div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>'STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025/stac-catalog-Dataset-cmip6-fef17806-907-file.zip (size: 1.14 MB). Or simply download from: https://www.gems.dkrz.de/api/freva-nextgen/databrowser/stac-catalogue/cmip6/file?multi-version=False&amp;mip_era=mpi-ge&amp;variable_id=tas&amp;frequency=mon&amp;experiment_id=%21picontrol&amp;time=2025-01+to+2100-12&amp;time_select=flexible'</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025/stac-catalog-Dataset-cmip6-ec013869-2c5-file.zip (size: 0.01 MB). Or simply download from: https://www.gems.dkrz.de/api/freva-nextgen/databrowser/stac-catalogue/cmip6/file?multi-version=False&amp;mip_era=mpi-ge&amp;variable_id=tas&amp;frequency=mon&amp;experiment_id=picontrol&amp;time=2025-01+to+2100-12&amp;time_select=flexible'</pre>
 </div>
 </div>
 </div>
@@ -10292,7 +10547,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 <div style="display: flex; align-items: center; gap: 20px;">
-<div style="background: white; color: #27ae60; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">4</div>
+<div style="background: white; color: #27ae60; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">3</div>
 <div style="color: white; text-align: left; flex: 1;">
 <h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Customize Dataset <span style="font-size: 0.6em; font-weight: normal;">(Interoperablity)</span></h1>
 </div>
@@ -10392,10 +10647,10 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getuser</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span><span class="o">,</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span>
+<span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="s2">"2025-01"</span><span class="p">,</span><span class="s2">"2026-01"</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s2">"datetime64[M]"</span><span class="p">)</span>
 <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">121</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">290</span><span class="p">,</span><span class="mi">171</span><span class="p">)</span>
 <span class="n">da</span> <span class="o">=</span> <span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="mi">28</span> <span class="o">-</span> <span class="mf">0.006</span><span class="o">*</span><span class="p">(</span><span class="n">lon</span><span class="o">-</span><span class="mi">230</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">"lon"</span><span class="p">,),</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"lon"</span><span class="p">:</span><span class="n">lon</span><span class="p">})</span>
@@ -10440,7 +10695,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.feature</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cfeature</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span><span class="o">,</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(</span><span class="mi">180</span><span class="p">)))</span>
 <span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -10568,7 +10823,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 <div style="display: flex; align-items: center; gap: 20px;">
-<div style="background: white; color: #27ae60; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">4</div>
+<div style="background: white; color: #27ae60; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">3</div>
 <div style="color: white; text-align: left; flex: 1;">
 <h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Customize Dataset <span style="font-size: 0.6em; font-weight: normal;">(Interoperablity)</span></h1>
 </div>
@@ -10672,13 +10927,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>$ freva-client databrowser user-data add --path dummy_sst_mo.nc --facet project=userdata --facet product=stats --facet model=IFS --facet experiment=ETCCDI --facet realm=atmos --token-file ~/.freva-access-token.json
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre><span class="ansi-green-intense-fg ansi-bold">1</span><span class="ansi-green-intense-fg ansi-bold"> have been successfully added to the databrowser. </span><span class="ansi-green-intense-fg ansi-bold">0</span><span class="ansi-green-intense-fg ansi-bold"> files were duplicates and </span>
+<span class="ansi-green-intense-fg ansi-bold">1</span><span class="ansi-green-intense-fg ansi-bold"> have been successfully added to the databrowser. </span><span class="ansi-green-intense-fg ansi-bold">0</span><span class="ansi-green-intense-fg ansi-bold"> files were duplicates and </span>
 <span class="ansi-green-intense-fg ansi-bold">not added.</span>
 
 </pre>
@@ -10696,13 +10945,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>$ freva-client databrowser user-data delete --search-key project=userdata --search-key product=stats --search-key model=IFS --search-key experiment=ETCCDI --search-key realm=atmos --token-file ~/.freva-access-token.json
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre><span class="ansi-green-intense-fg ansi-bold">User data deleted successfully</span>
+<span class="ansi-green-intense-fg ansi-bold">User data deleted successfully</span>
 
 </pre>
 </div>
@@ -10860,7 +11103,7 @@ STAC catalog saved to: /Users/mo/dev/20250801/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="HTTP-aka-internet-language!?">HTTP aka internet language!?<a class="anchor-link" href="#HTTP-aka-internet-language!?">¶</a></h2><p>Stands for <em>Hypertext Transfer Protocol</em>.
+<h2 id="HTTP-aka-internet-language!?">HTTP aka internet language!?<a class="anchor-link" href="#HTTP-aka-internet-language!?">¶</a></h2><p>Stands for <em>Hypertext Transfer Protocol</em>. 
 There are many protocols...</p>
 </div>
 </div>
@@ -11193,7 +11436,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -11208,7 +11451,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">zarr</span>
 <span class="n">zarr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -11234,7 +11477,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">endpoint_url</span><span class="o">=</span><span class="s2">"https://s3.eu-dkrz-1.dkrz.cloud"</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'s3://freva/workshop/tas.nc'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -11439,7 +11682,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}))</span>
 </pre></div>
@@ -11485,7 +11728,7 @@ Attributes:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="n">s3_opts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}</span>
 <span class="n">time_series</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -11557,7 +11800,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># Create a color cycle for different experiments</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
@@ -11658,7 +11901,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">environ</span> <span class="c1"># to get USER env variable</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span> <span class="c1"># to get USER env variable</span>
 <span class="n">USERNAME</span><span class="o">=</span><span class="n">environ</span><span class="p">[</span><span class="s1">'USER'</span><span class="p">]</span>
 <span class="n">s3_config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'bucket'</span> <span class="p">:</span> <span class="s1">'freva'</span><span class="p">,</span>
@@ -11692,7 +11935,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'access_key_id'</span><span class="p">],</span>
     <span class="n">secret</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'secret_access_key'</span><span class="p">],</span>
@@ -11826,7 +12069,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
     <span class="n">tmp_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.nc"</span>
 
     <span class="n">dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
@@ -11841,7 +12084,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
         <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">s3file</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
     
     <span class="c1">## We can now remove the local copy</span>
-    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">os</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -11867,11 +12110,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
-    <span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
+    <span class="kn">import</span> <span class="nn">zarr</span>
     <span class="n">zarr</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">default_zarr_format</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
-    <span class="kn">import</span><span class="w"> </span><span class="nn">numcodecs</span>
+    <span class="kn">import</span> <span class="nn">numcodecs</span>
     <span class="n">codec</span> <span class="o">=</span> <span class="n">numcodecs</span><span class="o">.</span><span class="n">Blosc</span><span class="p">(</span><span class="n">shuffle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">clevel</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
     
     <span class="n">data_encoding</span> <span class="o">=</span> <span class="p">{}</span>
@@ -11902,7 +12145,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
     <span class="n">_supported_types</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'nc'</span><span class="p">,</span><span class="s1">'zarr'</span><span class="p">)</span>
     <span class="n">file_format</span> <span class="o">=</span> <span class="n">file_format</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.'</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">file_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_supported_types</span><span class="p">:</span>
@@ -12320,10 +12563,7 @@ require(
             history: true,
             transition: "fade",
             slideNumber: "",
-            plugins: [RevealNotes],
-            width: 960,
-			      height: 700,
-
+            plugins: [RevealNotes]
         });
 
         var update = function(event){
