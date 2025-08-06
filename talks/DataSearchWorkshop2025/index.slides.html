@@ -7537,6 +7537,17 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 </div>
 </div>
 </div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ce5796dd-4c4d-4190-a5ab-c9fa758a8ee6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Primer:">Primer:<a class="anchor-link" href="#Primer:">¶</a></h3><p>We will be working with Jupyter Notebooks at the DKRZ Jupyter Hub: Let's head over to <a href="https://jupyterhub.dkrz.de/hub/home">https://jupyterhub.dkrz.de/hub/home</a> and start a JHub session</p>
+</div>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ac457db9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7567,7 +7578,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 </div>
 <div style="text-align: center;">
 <img alt="Mad scientist" src="./media/scientist-mad-scientist.gif"/>
-<p style="font-size: 1.2em; color: #7f8c8d;">Sound familiar?<br/> You're not alone! 🤝</p>
+<p style="font-size: 1.2em; color: #7f8c8d;">Sounds familiar?<br/> You're not alone! 🤝</p>
 </div>
 </div>
 <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 10px; margin-top: 15px;">
@@ -7868,7 +7879,7 @@ Search attributes by flavour:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                  <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">)</span>
@@ -8641,8 +8652,8 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">authenticate</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">authenticate</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="n">token</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">token_file</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"~/.token.json"</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">())</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                    <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -8762,7 +8773,7 @@ Attributes:
 <h3 style="color: #2c3e50; margin: 0 0 10px 0; font-size: 1.2em;">S3 Access
             <br/>
 <span style="color: #f39c12; font-weight: normal; font-size: 0.8em;">(Accessiblity)</span></h3>
-<p style="color: #7f8c8d; margin: 0; font-size: 0.9em; line-height: 1.4;">Add and cccess (your) data via the S3 cloud store</p>
+<p style="color: #7f8c8d; margin: 0; font-size: 0.9em; line-height: 1.4;">Add and access (your) data via the S3 cloud store</p>
 </div>
 </div>
 </div>
@@ -8818,13 +8829,11 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #95a5a6; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">0</div>
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: white; color: #95a5a6; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">0</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Setup </h3>
-</div>
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Setup</h1>
 </div>
 </div>
 </div>
@@ -8897,10 +8906,10 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8961,26 +8970,6 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 </div>
 </div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e129a365">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2c52f155">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9036,26 +9025,6 @@ Search attributes by flavour:
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=03d4dc4a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ba11ea71">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9093,26 +9062,6 @@ Search attributes by flavour:
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09da2b9a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7b96ff27">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9132,7 +9081,8 @@ Search attributes by flavour:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="err">$</span> <span class="n">freva</span><span class="o">-</span><span class="n">client</span> <span class="n">databrowser</span> <span class="n">metadata</span><span class="o">-</span><span class="n">search</span> <span class="o">--</span><span class="n">host</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gems</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> \
-<span class="o">--</span><span class="n">facet</span> <span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="o">--</span><span class="n">json</span> <span class="o">|</span> <span class="n">jq</span> <span class="o">-</span><span class="n">rc</span> <span class="s1">'.project|join(", ")'</span>
+<span class="o">--</span><span class="n">facet</span> <span class="n">mpi</span><span class="o">-</span><span class="n">ge</span> <span class="o">--</span><span class="n">json</span> <span class="o">|</span> <span class="n">jq</span> <span class="o">-</span><span class="n">r</span> <span class="s1">'to_entries[] | select(.value[] == "mpi-ge") </span><span class="se">\</span>
+<span class="s1">| .key'</span>
 </pre></div>
 </div>
 </div>
@@ -9146,7 +9096,7 @@ Search attributes by flavour:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>mpi-ge
+<pre>project
 </pre>
 </div>
 </div>
@@ -9182,26 +9132,6 @@ Search attributes by flavour:
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed76fe9c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3aa5daf3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9217,10 +9147,12 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)[</span><span class="s2">"project"</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="n">databrowser</span><span class="o">.</span><span class="n">metadata_search</span><span class="p">(</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">)</span>
+<span class="n">facets_with_mpi_ge</span> <span class="o">=</span> <span class="p">[</span><span class="n">facet</span> <span class="k">for</span> <span class="n">facet</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">"mpi-ge"</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">facets_with_mpi_ge</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9230,10 +9162,11 @@ Search attributes by flavour:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['mpi-ge']</pre>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['project']
+</pre>
 </div>
 </div>
 </div>
@@ -9266,26 +9199,6 @@ Search attributes by flavour:
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=20225897">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8651d24">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9336,26 +9249,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6f7c8b4b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4afedbd1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9374,7 +9267,7 @@ variable_id: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                  <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -9399,26 +9292,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dffcaba5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b0ac0c1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9443,26 +9316,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cfd96da0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=366fe678">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9536,26 +9389,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f7c01083">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb38be97">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9627,26 +9460,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2dd99ed">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=22cf8355">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9753,26 +9566,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8fe11fd7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9d0beb0d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9871,26 +9664,6 @@ variable_id: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=214f69d8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1d92bb99">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9934,26 +9707,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=544fec27">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d70dc7f7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10003,26 +9756,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8502bf18">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2e77b84f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10063,26 +9796,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=88612c2d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b305104d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10125,26 +9838,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=65186af1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4d1587cb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10201,26 +9894,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5485b75">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=900d8e2b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10239,7 +9912,7 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -10300,26 +9973,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02110842">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #3498db; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">1</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Search </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a3d8f595">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10642,26 +10295,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e56d1388">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #e74c3c; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">2</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Catalog </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e76af9f8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10788,26 +10421,6 @@ variable: tas
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7353353c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #e74c3c; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">2</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Catalog </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ff59c59a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10850,27 +10463,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9c921496">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #e74c3c; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">2</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Catalog </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="fragment">
+</div></div></section><section><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a9e7d28">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10920,26 +10513,6 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0df7a86b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #e74c3c; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">2</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Catalog </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4760dd17">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10992,27 +10565,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1ed2df22">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="fragment">
+</div></div></section><section><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a550dd2f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11073,27 +10626,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0f7feb17">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="fragment">
+</div></div></section><section><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=273d11cf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11112,10 +10645,10 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span><span class="o">,</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span>
-<span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getuser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="s2">"2025-01"</span><span class="p">,</span><span class="s2">"2026-01"</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s2">"datetime64[M]"</span><span class="p">)</span>
 <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">121</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">290</span><span class="p">,</span><span class="mi">171</span><span class="p">)</span>
 <span class="n">da</span> <span class="o">=</span> <span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="mi">28</span> <span class="o">-</span> <span class="mf">0.006</span><span class="o">*</span><span class="p">(</span><span class="n">lon</span><span class="o">-</span><span class="mi">230</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">"lon"</span><span class="p">,),</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"lon"</span><span class="p">:</span><span class="n">lon</span><span class="p">})</span>
@@ -11142,26 +10675,6 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5424cda">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=22d84319">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11180,7 +10693,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span><span class="o">,</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.feature</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cfeature</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(</span><span class="mi">180</span><span class="p">)))</span>
 <span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11211,13 +10724,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d  100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #95a5a6; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">0</div>
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: white; color: #95a5a6; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">0</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Auth </h3>
-</div>
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Authentication</h1>
 </div>
 </div>
 </div>
@@ -11308,13 +10819,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="background: white; color: #27ae60; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2em; box-shadow: 0 3px 8px rgba(0,0,0,0.2); flex-shrink: 0;">3</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Customize Dataset <span style="font-size: 0.6em; font-weight: normal;">(Interoperablity)</span></h1>
 </div>
 </div>
 </div>
@@ -11395,27 +10904,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ebd75748">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="fragment"></div><div class="fragment">
+</div></div></section><section><div class="fragment"></div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb11b51a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11474,26 +10963,6 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=215f1fed">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #27ae60 0%, #229954 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #27ae60; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">3</div>
-<div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> Custom </h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8fc9f65f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11542,13 +11011,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11585,13 +11052,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11628,13 +11093,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11671,13 +11134,11 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11723,13 +11184,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11748,13 +11207,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11773,13 +11230,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11814,13 +11269,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11849,13 +11302,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11888,13 +11339,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11917,13 +11366,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -11944,13 +11391,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -12011,13 +11456,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -12053,13 +11496,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -12082,13 +11523,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -12124,7 +11563,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12139,7 +11578,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
 <span class="n">zarr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12153,13 +11592,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;"> S3 </h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access <span style="font-size: 0.6em; font-weight: normal;"></span></h2>
 </div>
 </div>
 </div>
@@ -12175,7 +11612,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">endpoint_url</span><span class="o">=</span><span class="s2">"https://s3.eu-dkrz-1.dkrz.cloud"</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'s3://freva/workshop/tas.nc'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -12217,8 +11654,8 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>/fastdata/k20200/k202186/public/bin/ncdump  -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
-/fastdata/k20200/k202186/public/bin/cdo  sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
+<pre><code>/fastdata/freva/opt/bin/ncdump  -h https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
+/fastdata/freva/opt/bin/cdo  sinfo https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/tas.nc#mode=s3,bytes
 </code></pre>
 </div>
 </div>
@@ -12241,15 +11678,11 @@ There are many protocols...</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12281,15 +11714,11 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12339,15 +11768,11 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12422,15 +11847,11 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12447,15 +11868,11 @@ $<span class="w"> </span>da-workshop-setup
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12470,7 +11887,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}))</span>
 </pre></div>
@@ -12515,15 +11932,11 @@ Attributes:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12538,7 +11951,7 @@ Attributes:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">s3_opts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}</span>
 <span class="n">time_series</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -12587,15 +12000,11 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12621,15 +12030,11 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12644,7 +12049,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Create a color cycle for different experiments</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
@@ -12656,7 +12061,6 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
     <span class="n">ts_min</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
     <span class="n">ts_max</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
     <span class="n">ts_mean</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
-    <span class="n">time_str</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y"</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
     <span class="n">time_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'datetime64[ns]'</span><span class="p">)</span>
     <span class="c1"># Plot min–max shading</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
@@ -12708,21 +12112,15 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
-</div>
-# Let's save the plot on S3, as well as the datasets!
-
-
+<h1 id="Let's-save-the-plot-on-S3,-as-well-as-the-datasets!">Let's save the plot on S3, as well as the datasets!<a class="anchor-link" href="#Let's-save-the-plot-on-S3,-as-well-as-the-datasets!">¶</a></h1>
 </div>
 </div>
 </div>
@@ -12733,15 +12131,11 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12757,7 +12151,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span> <span class="c1"># to get USER env variable</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">environ</span> <span class="c1"># to get USER env variable</span>
 <span class="n">USERNAME</span><span class="o">=</span><span class="n">environ</span><span class="p">[</span><span class="s1">'USER'</span><span class="p">]</span>
 <span class="n">s3_config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'bucket'</span> <span class="p">:</span> <span class="s1">'freva'</span><span class="p">,</span>
@@ -12779,15 +12173,11 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12803,7 +12193,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'access_key_id'</span><span class="p">],</span>
     <span class="n">secret</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'secret_access_key'</span><span class="p">],</span>
@@ -12880,15 +12270,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12936,15 +12322,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -12961,7 +12343,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
     <span class="n">tmp_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.nc"</span>
 
     <span class="n">dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
@@ -12971,12 +12353,12 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">tmpf</span><span class="p">:</span>
             <span class="n">s3file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">tmpf</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
-    <span class="c1">## Check if we can open with Xarray and CDO!</span>
+    <span class="c1">## Check if we can open with Xarray!</span>
     <span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">s3file</span><span class="p">:</span>
         <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">s3file</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
     
     <span class="c1">## We can now remove the local copy</span>
-    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12990,15 +12372,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13014,11 +12392,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
-    <span class="kn">import</span> <span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
+    <span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
     <span class="n">zarr</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">default_zarr_format</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
-    <span class="kn">import</span> <span class="nn">numcodecs</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numcodecs</span>
     <span class="n">codec</span> <span class="o">=</span> <span class="n">numcodecs</span><span class="o">.</span><span class="n">Blosc</span><span class="p">(</span><span class="n">shuffle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">clevel</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
     
     <span class="n">data_encoding</span> <span class="o">=</span> <span class="p">{}</span>
@@ -13048,15 +12426,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13071,7 +12445,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
     <span class="n">_supported_types</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'nc'</span><span class="p">,</span><span class="s1">'zarr'</span><span class="p">)</span>
     <span class="n">file_format</span> <span class="o">=</span> <span class="n">file_format</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.'</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">file_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_supported_types</span><span class="p">:</span>
@@ -13101,15 +12475,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13172,15 +12542,11 @@ Browser the data in https://eu-dkrz-1.dkrz.cloud/browser/freva/workshop/k202186
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13224,15 +12590,11 @@ ncdump<span class="w"> </span>-h<span class="w"> </span>https://s3.eu-dkrz-1.dkr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13339,15 +12701,11 @@ variables:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
@@ -13453,15 +12811,11 @@ variables:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
-<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-<div style="display: flex; align-items: center; gap: 8px;">
-<div style="background: white; color: #f39c12; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
+<div style="padding: 6px 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border-radius: 6px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="background: white; color: #f39c12; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4em; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0;">4</div>
 <div style="color: white; text-align: left; flex: 1;">
-<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
-          S3 <span style="font-size: 0.8em; font-weight: normal;">Handson</span>
-</h3>
-</div>
+<h2 style="margin: 0; font-size: 1.4em; font-weight: bold;">S3 Access<span style="font-size: 0.6em; font-weight: normal;"> -- Handson</span></h2>
 </div>
 </div>
 </div>
