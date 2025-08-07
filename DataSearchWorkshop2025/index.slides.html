@@ -7545,6 +7545,7 @@ div.prompt, div.jp-InputPrompt, div.jp-InputArea-prompt, div.jp-OutputPrompt, di
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Primer:">Primer:<a class="anchor-link" href="#Primer:">¶</a></h3><p>We will be working with Jupyter Notebooks at the DKRZ Jupyter Hub: Let's head over to <a href="https://jupyterhub.dkrz.de/hub/home">https://jupyterhub.dkrz.de/hub/home</a> and start a JHub session</p>
+<p>Otherwise, <a href="https://github.com/freva-org/Talks/tree/main/talks/DataSearchWorkshop2025">Jupyter notebooks for this workshop</a>: <code>Tutorial-{I,II,III}-*.ipynb</code></p>
 </div>
 </div>
 </div>
@@ -7879,7 +7880,7 @@ Search attributes by flavour:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                  <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span> <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tas"</span><span class="p">)</span>
@@ -8652,8 +8653,8 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">authenticate</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">authenticate</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">token</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">token_file</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"~/.token.json"</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">())</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"www.gems.dkrz.de"</span><span class="p">,</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                    <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -8911,7 +8912,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">__version__</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9389,7 +9390,7 @@ variable_id: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">databrowser</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"https://www.gems.dkrz.de"</span><span class="p">,</span>
                  <span class="n">flavour</span><span class="o">=</span><span class="s2">"cmip6"</span><span class="p">,</span>
                  <span class="n">mip_era</span><span class="o">=</span><span class="s2">"mpi-ge"</span><span class="p">,</span>
@@ -10254,7 +10255,7 @@ variable: tas
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -11127,10 +11128,10 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getuser</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">freva_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span><span class="o">,</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span>
+<span class="kn">from</span> <span class="nn">freva_client</span> <span class="kn">import</span> <span class="n">databrowser</span><span class="p">,</span> <span class="n">authenticate</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="s2">"2025-01"</span><span class="p">,</span><span class="s2">"2026-01"</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s2">"datetime64[M]"</span><span class="p">)</span>
 <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">121</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">290</span><span class="p">,</span><span class="mi">171</span><span class="p">)</span>
 <span class="n">da</span> <span class="o">=</span> <span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="mi">28</span> <span class="o">-</span> <span class="mf">0.006</span><span class="o">*</span><span class="p">(</span><span class="n">lon</span><span class="o">-</span><span class="mi">230</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">"lon"</span><span class="p">,),</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"lon"</span><span class="p">:</span><span class="n">lon</span><span class="p">})</span>
@@ -11195,7 +11196,7 @@ STAC catalog saved to: /Users/mo/dev/20250805/Talks/talks/DataSearchWorkshop2025
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span><span class="o">,</span><span class="w"> </span><span class="nn">cartopy.feature</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cfeature</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span><span class="o">,</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(</span><span class="mi">180</span><span class="p">)))</span>
 <span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -12139,7 +12140,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12154,7 +12155,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">zarr</span>
 <span class="n">zarr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">s3_opts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12190,7 +12191,7 @@ There are many protocols...</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">endpoint_url</span><span class="o">=</span><span class="s2">"https://s3.eu-dkrz-1.dkrz.cloud"</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'s3://freva/workshop/tas.nc'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -12485,7 +12486,7 @@ $<span class="w"> </span>da-workshop-setup
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">db</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'zarr'</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}))</span>
 </pre></div>
@@ -12553,7 +12554,7 @@ Attributes:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="n">s3_opts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'anon'</span><span class="p">:</span><span class="kc">True</span> <span class="p">}</span>
 <span class="n">time_series</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -12659,7 +12660,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># Create a color cycle for different experiments</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.prop_cycle"</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s2">"color"</span><span class="p">]</span>
@@ -12771,7 +12772,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getuser</span> <span class="c1"># to get USER env variable</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getuser</span> <span class="c1"># to get USER env variable</span>
 <span class="n">USERNAME</span> <span class="o">=</span> <span class="n">getuser</span><span class="p">()</span>
 <span class="n">s3_config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'bucket'</span> <span class="p">:</span> <span class="s1">'freva'</span><span class="p">,</span>
@@ -12817,7 +12818,7 @@ Opening s3://ncar-cesm2-lens/atm/monthly/cesm2LE-historical-cmip6-TS.zarr
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'access_key_id'</span><span class="p">],</span>
     <span class="n">secret</span> <span class="o">=</span> <span class="n">s3_config</span><span class="p">[</span><span class="s1">'secret_access_key'</span><span class="p">],</span>
@@ -12975,7 +12976,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_netcdf</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
     <span class="n">tmp_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.nc"</span>
 
     <span class="n">dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
@@ -12990,7 +12991,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
         <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">s3file</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'h5netcdf'</span><span class="p">)</span>
     
     <span class="c1">## We can now remove the local copy</span>
-    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">os</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_name</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -13028,11 +13029,11 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
-    <span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_zarr</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>     
+    <span class="kn">import</span> <span class="nn">zarr</span>
     <span class="n">zarr</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">default_zarr_format</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
-    <span class="kn">import</span><span class="w"> </span><span class="nn">numcodecs</span>
+    <span class="kn">import</span> <span class="nn">numcodecs</span>
     <span class="n">codec</span> <span class="o">=</span> <span class="n">numcodecs</span><span class="o">.</span><span class="n">Blosc</span><span class="p">(</span><span class="n">shuffle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">clevel</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
     
     <span class="n">data_encoding</span> <span class="o">=</span> <span class="p">{}</span>
@@ -13085,7 +13086,7 @@ curl https://s3.eu-dkrz-1.dkrz.cloud/freva/workshop/k202186/hi.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">write_dataset_to_s3</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="s1">'nc'</span><span class="p">):</span>
     <span class="n">_supported_types</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'nc'</span><span class="p">,</span><span class="s1">'zarr'</span><span class="p">)</span>
     <span class="n">file_format</span> <span class="o">=</span> <span class="n">file_format</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.'</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">file_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_supported_types</span><span class="p">:</span>
@@ -13596,35 +13597,85 @@ All output datasets opened!
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="A-short-introduction-to-FrevaGPT">A short introduction to FrevaGPT<a class="anchor-link" href="#A-short-introduction-to-FrevaGPT">¶</a></h2><div style="display: flex; gap: 20px; align-items: flex-start;">
+<div style="width: 15%; min-width: 120px; margin-left: auto; text-align: left;">
+<div style="padding: 6px 8px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); border-radius: 6px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: center; gap: 8px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h3 style="margin: 0; font-size: 0.9em; font-weight: bold;">
+          Wrap-up
+        </h3>
+</div>
+</div>
+</div>
+</div>
+<h2 id="What-is-FrevaGPT?-(pre-Beta!)">What is FrevaGPT? (pre-Beta!)<a class="anchor-link" href="#What-is-FrevaGPT?-(pre-Beta!)">¶</a></h2><div style="display: flex; gap: 20px; align-items: flex-start;">
 <div style="flex: 1;">
 <ul>
-<li><p>🤖 <strong>FrevaGPT</strong> is an AI assistant built into the Freva ecosystem. It uses large language models (LLMs) like GPT-4 alongside a live Python interpreter.<br>
-➤ You can currently try it at: <a href="https://gems.dkrz.de/chatbot/">https://gems.dkrz.de/chatbot/</a></br></p>
+<li><p>🤖 <strong>FrevaGPT</strong> is an AI assistant built into the Freva ecosystem. It uses large language models (LLMs) like GPT-4 alongside a live Python interpreter.</p>
 </li>
 <li><p>⚙️ It runs code directly on hybrid CPU/GPU nodes at DKRZ's Levante, operating on real data!</p>
+</li>
+<li><p>⚙️ It is also integrated with JupyterAI frontend for extended functionality with jupyterhub.</p>
 </li>
 <li><p>🚀 It serves as a powerful <strong>stepping stone</strong> to explore and analysis data using Freva.</p>
 </li>
 </ul>
+<p>➤ You can currently try it at: <a href="https://gems.dkrz.de/chatbot/">https://gems.dkrz.de/chatbot/</a></p>
 </div>
 <div style="flex: 1;">
-<img alt="No description has been provided for this image" src="media/frevagpt-architecture.png" style="max-width: 100%; border-radius: 6px;"/>
+<img alt="No description has been provided for this image" src="media/frevagpt-architecture.png" style="max-width: 80%; border-radius: 6px;"/>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=93ba783e">
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09d4a550">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="padding: 10px; font-family: Arial, sans-serif; background: linear-gradient(135deg, #ce0056ff 0%, #ce0056ff 100%); border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div style="display: flex; align-items: center; gap: 20px;">
+<div style="color: white; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.5em; font-weight: bold; text-align: left;">Useful Info<span style="font-size: 0.6em; font-weight: normal;"></span></h1>
+</div>
+</div>
+</div>
+<li><a href="https://github.com/freva-org/Talks/tree/main/talks/DataSearchWorkshop2025">Jupyter notebooks for this workshop</a>: <code>Tutorial-{I,II,III}-*.ipynb</code></li>
+<li><a href="https://freva-org.github.io/Talks/">Collection of related presentations</a></li>
+<li><a href="https://freva-org.github.io/freva-nextgen/">Freva documentation</a> and <a href="https://github.com/freva-org/">GitHub repo</a></li>
+<li>Open instances of Freva at DKRZ:</li>
+
+<br/>
+<table>
+<thead>
+<tr>
+<th>instance</th>
+<th>hostname</th>
+<th>command (levante)</th>
+<th>obs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://gems.dkrz.de">gems.dkrz.de</a></td>
+<td><code>https://www.gems.dkrz.de</code></td>
+<td><code>module load clint gems</code></td>
+<td>only data browser</td>
+</tr>
+<tr>
+<td><a href="https://freva.dkrz.de">freva.dkrz.de</a></td>
+<td><code>http://regiklim-dev.dkrz.de</code></td>
+<td><code>module load clint freva</code></td>
+<td>with <strong>plugins</strong> <br/> ⚠️Need to add batch scheduling info in <code>Extra scheduler options</code>⚠️</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<div style="color: wBlackhite; text-align: left; flex: 1;">
+<h1 style="margin: 0; font-size: 2.0em; font-weight: regular; text-align: center;">To reach us out, please write at <a href="mailto:freva@dkrz.de">freva@dkrz.de</a><span style="font-size: 0.6em; font-weight: normal;"></span></h1>
 </div>
 </div>
 </div>
