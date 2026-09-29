@@ -33,7 +33,8 @@ jupyter nbconvert "${merged_notebook}" \
     --output "${output_name}" \
     --output-dir "${script_dir}" \
     --TagRemovePreprocessor.enabled=True \
-    --TagRemovePreprocessor.remove_input_tags=hide_input \
+    --TagRemovePreprocessor.remove_input_tags='{"hide_input"}' \
+    --TagRemovePreprocessor.remove_cell_tags='{"remove_cell"}' \
     --SlidesExporter.reveal_transition=fade \
     --SlidesExporter.reveal_theme=simple \
     --SlidesExporter.reveal_scroll=True
