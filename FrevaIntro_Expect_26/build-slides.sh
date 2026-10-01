@@ -7,6 +7,7 @@ script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source_notebook="${script_dir}/FrevaIntro.ipynb"
 style_notebook="${script_dir}/style.ipynb"
 output_name="index"
+output_file="${script_dir}/${output_name}.slides.html"
 merged_notebook="$(mktemp "${script_dir}/.merged-slides.XXXXXX.ipynb")"
 
 cleanup() {
@@ -26,8 +27,10 @@ if ! command -v nbmerge >/dev/null 2>&1; then
     exit 1
 fi
 
+# Merge styling notebook + presentation notebook.
 nbmerge "${style_notebook}" "${source_notebook}" > "${merged_notebook}"
 
+# Convert merged notebook to Reveal.js slides.
 jupyter nbconvert "${merged_notebook}" \
     --to slides \
     --output "${output_name}" \
@@ -39,4 +42,7 @@ jupyter nbconvert "${merged_notebook}" \
     --SlidesExporter.reveal_theme=simple \
     --SlidesExporter.reveal_scroll=True
 
-echo "Slides generated: ${script_dir}/index.slides.html"
+# Set browser tab title.
+sed -i 's|<title>[^<]*</title>|<title>Freva Intro Expect26</title>|' "${output_file}"
+
+echo "Slides generated: ${output_file}"
